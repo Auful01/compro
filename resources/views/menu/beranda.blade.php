@@ -1,0 +1,1098 @@
+@extends('layout.main')
+
+@section('content')
+
+    <div class="gdlr-content">
+
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{{asset('upload/rokok31.jpg')}}" class="d-block w-70" style="max-height: 80%;" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>First slide label</h5>
+                  <p>Some representative placeholder content for the first slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="{{asset('upload/rokok4.png')}}" class="d-block w-100" style="max-height: 80%;" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Second slide label</h5>
+                  <p>Some representative placeholder content for the second slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="{{asset('upload/rokok31.jpg')}}" class="d-block w-100" style="maxheight: 80%;" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Third slide label</h5>
+                  <p>Some representative placeholder content for the third slide.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        <!-- Above Sidebar Section-->
+        {{-- <div class="above-sidebar-wrapper">
+            <section id="content-section-1">
+                <div class="gdlr-full-size-wrapper gdlr-show-all no-skin"
+                    style="padding-bottom: 0px;  background-color: #ffffff; ">
+                    <div class="gdlr-master-slider-item gdlr-slider-item gdlr-item" style="margin-bottom: 0px;">
+                        <!-- MasterSlider -->
+                        <div id="P_MS5bab48b0b8b8a" class="master-slider-parent ms-parent-id-11">
+
+                            <!-- MasterSlider Main -->
+                            <div id="MS5bab48b0b8b8a" class="master-slider ms-skin-default">
+
+                                <div class="ms-slide" data-delay="7" data-fill-mode="fill">
+                                    <img src="{{asset('assets/css/blank.gif')}}" alt="" title=""
+                                        data-src="upload/rokok3.jpg" />
+
+                                    <div class="ms-layer  msp-cn-11-1" style=""
+                                        data-effect="t(true,n,n,500,n,n,n,n,n,n,n,n,n,n,n)" data-duration="387"
+                                        data-ease="easeOutQuint" data-offset-x="-2" data-offset-y="-144"
+                                        data-origin="ml" data-position="normal">
+                                        SELAMAT DATANG</div>
+
+                                    <div class="ms-layer  msp-cn-11-2" style=""
+                                        data-effect="t(true,n,n,-500,n,n,n,n,n,n,n,n,n,n,n)" data-duration="387"
+                                        data-delay="387" data-ease="easeOutQuint" data-offset-x="2"
+                                        data-offset-y="-33" data-origin="ml" data-position="normal">
+                                        Total Business</div>
+
+                                    <div class="ms-layer  msp-cn-11-4" style=""
+                                        data-effect="t(true,n,n,-500,n,n,n,n,n,n,n,n,n,n,n)" data-duration="400"
+                                        data-delay="750" data-ease="easeOutQuint" data-offset-x="3"
+                                        data-offset-y="396" data-origin="tl" data-position="normal">
+                                        PT. SEHAT SELALU BANYAK REJEKI</div>
+
+                                    <a href="" target="_self"
+                                        class="ms-layer ms-btn ms-btn-round ms-btn-n msp-preset-btn-159"
+                                        data-duration="437" data-delay="1112" data-ease="easeOutQuint"
+                                        data-type="button" data-offset-x="3" data-offset-y="132"
+                                        data-origin="ml" data-position="normal">Learn More</a>
+
+                                </div>
+                                <div class="ms-slide" data-delay="7" style="background: #04040485;"
+                                    data-fill-mode="fill">
+                                    <img src="{{asset('assets/css/blank.gif')}}" alt="" title=""
+                                        data-src="{{asset('upload/rokok4.png')}}" />
+
+                                    <div class="ms-layer  msp-cn-11-5" style="color: rgb(0, 0, 0);"
+                                        data-effect="t(true,n,n,-500,n,n,n,n,n,n,n,n,n,n,n)" data-duration="387"
+                                        data-ease="easeOutQuint" data-offset-x="20" data-offset-y="-33"
+                                        data-origin="mr" data-position="normal">
+                                        Good Website</div>
+
+                                    <div class="ms-layer  msp-cn-11-4" style=""
+                                        data-effect="t(true,n,n,500,n,n,n,n,n,n,n,n,n,n,n)" data-duration="387"
+                                        data-delay="425" data-ease="easeOutQuint" data-offset-x="30"
+                                        data-offset-y="52" data-origin="mr" data-position="normal">
+                                        Help Growing Your Business</div>
+
+                                    <a href="" target="_self"
+                                        class="ms-layer ms-btn ms-btn-round ms-btn-n msp-preset-btn-159"
+                                        data-duration="437" data-delay="800" data-ease="easeOutQuint"
+                                        data-type="button" data-offset-x="29" data-offset-y="128"
+                                        data-origin="mr" data-position="normal">
+                                        Learn More</a>
+
+                                </div>
+
+                            </div>
+                            <!-- END MasterSlider Main -->
+
+                        </div>
+                        <!-- END MasterSlider -->
+
+
+
+                    </div>
+                    <div class="clear"></div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </section>
+        </div> --}}
+
+        <!-- Sidebar With Content Section-->
+        <div class="with-sidebar-wrapper">
+            <section id="content-section-2">
+                <div class="gdlr-full-size-wrapper gdlr-show-all gdlr-skin-service-half"
+                    style="padding-bottom: 0px;  background-color: #ffffff; ">
+                    <div class="gdlr-service-half-background-item" style="margin-bottom: 0px;">
+                        <div class="gdlr-half-left"
+                            style="background-image: url('{{asset('upload/rokok.jfif')}}'); background-repeat: no-repeat; background-size: cover;">
+                            <div class="half-container">
+                                <div class="gdlr-item-margin">
+                                    <h3 class="gdlr-left-service-title">We have served more than 10,000
+                                        customers</h3>
+                                    <div class="gdlr-left-service-content" style="color: white;">
+                                        <p>Donec ullamcorper nulla non metus auctor fringilla. Integer posuere
+                                            erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae
+                                            elit libero, a pharetra augue. Nulla vitae elit libero, a pharetra
+                                            augue. Cum sociis natoque penatibus et magnis dis parturient montes,
+                                            nascetur ridiculus mus. Donec id elit non mi porta gravida at eget
+                                            metus. Donec id elit non mi porta gravida at eget metus.</p>
+                                    </div><a class="gdlr-left-service-read-more" href="#">Take A Tour</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gdlr-half-right" style="background: #262626;">
+                            <div class="half-container">
+                                <div class="gdlr-item-margin">
+                                    <h3 class="gdlr-right-service-title">We provide fast & great customer
+                                        support</h3>
+                                    <div class="gdlr-right-service-caption">
+                                        <p>Donec ullamcorper nulla non metus auctor fringilla. Integer posuere
+                                            erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae
+                                            elit libero, a pharetra augue. Nulla vitae elit libero, a pharetra
+                                            augue. Cum sociis natoque penatibus et magnis dis parturient montes,
+                                            nascetur ridiculus mus. Donec id elit non mi porta gravida at eget
+                                            metus. Donec id elit non mi porta gravida at eget metus.</p>
+                                    </div><a class="gdlr-right-service-read-more" href="#">Take A Tour</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </section>
+            <section id="content-section-3">
+                <div class="gdlr-color-wrapper  gdlr-show-all gdlr-skin-stunning-text-small"
+                    style="background-color: #36bddb; padding-top: 55px; padding-bottom: 34px; ">
+                    <div class="container">
+                        <div class="gdlr-stunning-item-ux gdlr-ux">
+                            <div class="gdlr-item gdlr-stunning-item gdlr-button-on gdlr-stunning-small-left">
+                                <h2 class="stunning-item-title">Untuk Info Lebih Lanjut Hubungi Kami</h2><a
+                                    class="stunning-item-button gdlr-button small" href="{{url('/contact')}}"
+                                    target="_blank" style="text-decoration: none">Contact US</a>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </section>
+            <section id="content-section-4">
+                <div class="gdlr-color-wrapper  gdlr-show-all no-skin"
+                    style="background-color: #ffffff; padding-top: 70px; padding-bottom: 20px; ">
+                    <div class="container">
+                        <div class="four columns">
+                            <div class="gdlr-ux column-service-ux">
+                                <div class="gdlr-item gdlr-column-service-item gdlr-type-1">
+                                    <div class="column-service-image"><img src="upload/icon-service-1.png"
+                                            alt="" width="70" height="70" /></div>
+                                    <div class="column-service-content-wrapper">
+                                        <h3 class="column-service-title">Commodo Fringilla Nibh</h3>
+                                        <div class="column-service-content gdlr-skin-content">
+                                            <p>Sed posuere consectetur est at lobortis. Etiam porta sem
+                                                malesuada magna mollis euismod. Nulla vitae elit libero, a
+                                                pharetra augue. Cras mattis consecte.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="four columns">
+                            <div class="gdlr-ux column-service-ux">
+                                <div class="gdlr-item gdlr-column-service-item gdlr-type-1">
+                                    <div class="column-service-image"><img src="upload/icon-service-2.png"
+                                            alt="" width="70" height="70" /></div>
+                                    <div class="column-service-content-wrapper">
+                                        <h3 class="column-service-title">Mattis Sollicitudin</h3>
+                                        <div class="column-service-content gdlr-skin-content">
+                                            <p>Sed posuere consectetur est at lobortis. Etiam porta sem
+                                                malesuada magna mollis euismod. Nulla vitae elit libero, a
+                                                pharetra augue. Cras mattis consecte.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="four columns">
+                            <div class="gdlr-ux column-service-ux">
+                                <div class="gdlr-item gdlr-column-service-item gdlr-type-1">
+                                    <div class="column-service-image"><img src="upload/icon-service-4.png"
+                                            alt="" width="70" height="70" /></div>
+                                    <div class="column-service-content-wrapper">
+                                        <h3 class="column-service-title">Ultricies Purus Tristique</h3>
+                                        <div class="column-service-content gdlr-skin-content">
+                                            <p>Sed posuere consectetur est at lobortis. Etiam porta sem
+                                                malesuada magna mollis euismod. Nulla vitae elit libero, a
+                                                pharetra augue. Cras mattis consecte.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="four columns">
+                            <div class="gdlr-ux column-service-ux">
+                                <div class="gdlr-item gdlr-column-service-item gdlr-type-1">
+                                    <div class="column-service-image"><img src="upload/icon-service-3.png"
+                                            alt="" width="70" height="70" /></div>
+                                    <div class="column-service-content-wrapper">
+                                        <h3 class="column-service-title">Tristique Egestas Dolor</h3>
+                                        <div class="column-service-content gdlr-skin-content">
+                                            <p>Sed posuere consectetur est at lobortis. Etiam porta sem
+                                                malesuada magna mollis euismod. Nulla vitae elit libero, a
+                                                pharetra augue. Cras mattis consecte.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="four columns">
+                            <div class="gdlr-ux column-service-ux">
+                                <div class="gdlr-item gdlr-column-service-item gdlr-type-1">
+                                    <div class="column-service-image"><img src="upload/icon-service-5.png"
+                                            alt="" width="70" height="70" /></div>
+                                    <div class="column-service-content-wrapper">
+                                        <h3 class="column-service-title">Amet Tristique Magna</h3>
+                                        <div class="column-service-content gdlr-skin-content">
+                                            <p>Sed posuere consectetur est at lobortis. Etiam porta sem
+                                                malesuada magna mollis euismod. Nulla vitae elit libero, a
+                                                pharetra augue. Cras mattis consecte.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="four columns">
+                            <div class="gdlr-ux column-service-ux">
+                                <div class="gdlr-item gdlr-column-service-item gdlr-type-1">
+                                    <div class="column-service-image"><img src="upload/icon-service-6.png"
+                                            alt="" width="70" height="70" /></div>
+                                    <div class="column-service-content-wrapper">
+                                        <h3 class="column-service-title">Ornare Cras Ultricies</h3>
+                                        <div class="column-service-content gdlr-skin-content">
+                                            <p>Sed posuere consectetur est at lobortis. Etiam porta sem
+                                                malesuada magna mollis euismod. Nulla vitae elit libero, a
+                                                pharetra augue. Cras mattis consecte.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </section>
+            {{-- <section id="content-section-5">
+                <div class="gdlr-parallax-wrapper gdlr-background-image gdlr-show-all gdlr-skin-dark-skin"
+                    id="gdlr-parallax-wrapper-1" data-bgspeed="0.05"
+                    style="background-image: url('{{asset('upload/rokok3.jpg')}}'); padding-top: 110px; padding-bottom: 80px; ">
+                    <div class="container">
+                        <div class="gdlr-stunning-item-ux gdlr-ux">
+                            <div class="gdlr-item gdlr-stunning-item gdlr-button-on gdlr-stunning-left">
+                                <h2 class="stunning-item-title">It’s The Best WordPress Theme.</h2>
+                                <div class="stunning-item-caption gdlr-skin-content">
+                                    <p>This theme comes with many awesome features and it suits to any kind of
+                                        businesses. You will love it!</p>
+                                </div><a class="stunning-item-button gdlr-button " href="#"
+                                    target="_blank">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </section> --}}
+            <section id="content-section-6">
+                <div class="gdlr-full-size-wrapper gdlr-show-all gdlr-skin-dark-skin"
+                    style="padding-top: 45px; padding-bottom: 0px;  background-color: #2f2f2f; ">
+                    <div class="gdlr-item-title-wrapper gdlr-item  gdlr-center gdlr-medium ">
+                        <div class="gdlr-item-title-container container">
+                            <div class="gdlr-item-title-head">
+                                <h3 class="gdlr-item-title gdlr-skin-title gdlr-skin-border">Kerja Kami</h3>
+                                <a class="gdlr-item-title-link " href="#">Lihat Galeri Kerja</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-item-wrapper type-modern-portfolio-no-space" data-ajax="#">
+                        <div class="portfolio-item-holder gdlr-item-no-space gdlr-portfolio-column-3">
+                            <div class="gdlr-isotope" data-type="portfolio" data-layout="fitRows">
+                                <div class="clear"></div>
+                                <div class="four columns">
+                                    <div class="gdlr-item gdlr-portfolio-item gdlr-modern-portfolio">
+                                        <div class="gdlr-ux gdlr-modern-portfolio-ux">
+                                            <div class="portfolio-thumbnail gdlr-image"><img
+                                                    src="{{asset('gambar/img1.jpeg')}}" alt=""
+                                                    width="700" height="400" /><span
+                                                    class="portfolio-overlay">&nbsp;</span>
+                                                <div class="portfolio-overlay-content">
+                                                    <h3 class="portfolio-title">
+                                                        <a href="{{asset('gambar/img1.jpeg')}}" data-rel="fancybox">Wood Crafting</a></h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="four columns">
+                                    <div class="gdlr-item gdlr-portfolio-item gdlr-modern-portfolio">
+                                        <div class="gdlr-ux gdlr-modern-portfolio-ux">
+                                            <div class="portfolio-thumbnail gdlr-image"><img
+                                                    src="{{asset('gambar/img2.jpeg')}}" alt=""
+                                                    width="700" height="400" /><span
+                                                    class="portfolio-overlay">&nbsp;</span>
+                                                <div class="portfolio-overlay-content">
+                                                    <h3 class="portfolio-title"><a href="#">Mixed Plywood</a></h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="four columns">
+                                    <div class="gdlr-item gdlr-portfolio-item gdlr-modern-portfolio">
+                                        <div class="gdlr-ux gdlr-modern-portfolio-ux">
+                                            <div class="portfolio-thumbnail gdlr-image"><img
+                                                    src="{{asset('gambar/img3.jpeg')}}" alt=""
+                                                    width="700" height="400" /><span
+                                                    class="portfolio-overlay">&nbsp;</span>
+                                                <div class="portfolio-overlay-content">
+                                                    <h3 class="portfolio-title">
+                                                        <a href="https://vimeo.com/35208721" data-rel="fancybox" data-fancybox-type="iframe">Wood Flooring</a></h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="four columns">
+                                    <div class="gdlr-item gdlr-portfolio-item gdlr-modern-portfolio">
+                                        <div class="gdlr-ux gdlr-modern-portfolio-ux">
+                                            <div class="portfolio-thumbnail gdlr-image"><img
+                                                    src="{{asset('gambar/img4.jpeg')}}" alt=""
+                                                    width="700" height="400" /><span
+                                                    class="portfolio-overlay">&nbsp;</span>
+                                                <div class="portfolio-overlay-content">
+                                                    <h3 class="portfolio-title"><a href="#">Built in Living
+                                                            Room</a></h3>
+                                                    <div class="gdlr-portfolio-info">
+
+                                                        <div class="clear">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="four columns">
+                                    <div class="gdlr-item gdlr-portfolio-item gdlr-modern-portfolio">
+                                        <div class="gdlr-ux gdlr-modern-portfolio-ux">
+                                            <div class="portfolio-thumbnail gdlr-image"><img
+                                                    src="{{asset('gambar/img3.jpeg')}}" alt=""
+                                                    width="700" height="400" /><span
+                                                    class="portfolio-overlay">&nbsp;</span>
+                                                <div class="portfolio-overlay-content">
+                                                    <h3 class="portfolio-title"><a href="#">Video inside this
+                                                            post</a></h3>
+                                                    {{-- <div class="gdlr-portfolio-info">
+                                                        <div class="portfolio-info portfolio-tag"><span
+                                                                class="info-head gdlr-title">Tags </span><a
+                                                                href="#" rel="tag">Carpenter</a><span
+                                                                class="sep">,</span> <a href="#"
+                                                                rel="tag">Works</a></div>
+                                                        <div class="clear"></div>
+                                                    </div> --}}
+                                                </div>
+                                                {{-- <a class="portfolio-overlay-icon" href="#"><span
+                                                        class="portfolio-icon"><i
+                                                            class="fa fa-link"></i></span></a> --}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="four columns">
+                                    <div class="gdlr-item gdlr-portfolio-item gdlr-modern-portfolio">
+                                        <div class="gdlr-ux gdlr-modern-portfolio-ux">
+                                            <div class="portfolio-thumbnail gdlr-image"><img
+                                                    src="{{asset('gambar/img6.jpeg')}}" alt=""
+                                                    width="700" height="400" /><span
+                                                    class="portfolio-overlay">&nbsp;</span>
+                                                <div class="portfolio-overlay-content">
+                                                    <h3 class="portfolio-title"><a
+                                                            href="upload/shutterstock_125357699.jpg"
+                                                            data-rel="fancybox">Flooring Design</a></h3>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </section>
+            <section id="content-section-7">
+                <div class="gdlr-color-wrapper  gdlr-show-all no-skin"
+                    style="background-color: #ffffff; padding-top: 75px; padding-bottom: 50px; ">
+                    <div class="container">
+                        <div class="six columns">
+                            <div class="gdlr-item gdlr-about-us-item gdlr-plain">
+                                <div class="about-us-title-wrapper">
+                                    <h3 class="about-us-title">About Us</h3>
+                                    <div class="about-us-title-divider"></div>
+                                </div>
+                                <div class="about-us-content-wrapper">
+                                    <div class="about-us-content gdlr-skin-content">
+                                        <p>Donec ullamcorper nulla non metus auctor fringilla. Integer posuere
+                                            erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae
+                                            elit libero, a pharetra augue. Nulla vitae elit libero, a pharetra
+                                            augue. Cum sociis natoque penatibus et magnis dis parturient montes,
+                                            nascetur ridiculus mus.  Donec id elit non mi porta gravida at eget
+                                            metus. Donec id elit non mi porta gravida at eget metus.</p>
+                                    </div><a class="about-us-read-more " href="#">Read More</a>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="six columns">
+                            <div class="gdlr-skill-bar-wrapper  gdlr-item gdlr-size-small"><span
+                                    class="skill-bar-content" style="color: #3a3a3a;">Advanced
+                                    Technologies</span><span class="skill-bar-percent"
+                                    style="color: #3a3a3a;">80%</span>
+                                <div class="gdlr-skill-bar gdlr-ux" style="background-color: #e9e9e9;">
+                                    <div class="gdlr-skill-bar-progress" data-percent="80"
+                                        style="background-color: #36bddb;"></div>
+                                </div>
+                            </div>
+                            <div class="gdlr-skill-bar-wrapper  gdlr-item gdlr-size-small"><span
+                                    class="skill-bar-content" style="color: #3a3a3a;">Production
+                                    Capacity</span><span class="skill-bar-percent"
+                                    style="color: #3a3a3a;">95%</span>
+                                <div class="gdlr-skill-bar gdlr-ux" style="background-color: #e9e9e9;">
+                                    <div class="gdlr-skill-bar-progress" data-percent="95"
+                                        style="background-color: #36bddb;"></div>
+                                </div>
+                            </div>
+                            <div class="gdlr-skill-bar-wrapper  gdlr-item gdlr-size-small"><span
+                                    class="skill-bar-content" style="color: #3a3a3a;">Utilization
+                                    Rate</span><span class="skill-bar-percent"
+                                    style="color: #3a3a3a;">70%</span>
+                                <div class="gdlr-skill-bar gdlr-ux" style="background-color: #e9e9e9;">
+                                    <div class="gdlr-skill-bar-progress" data-percent="70"
+                                        style="background-color: #36bddb;"></div>
+                                </div>
+                            </div>
+                            <div class="gdlr-skill-bar-wrapper  gdlr-item gdlr-size-small"><span
+                                    class="skill-bar-content" style="color: #3a3a3a;">Customer
+                                    Satisfaction</span><span class="skill-bar-percent"
+                                    style="color: #3a3a3a;">100%</span>
+                                <div class="gdlr-skill-bar gdlr-ux" style="background-color: #e9e9e9;">
+                                    <div class="gdlr-skill-bar-progress" data-percent="100"
+                                        style="background-color: #36bddb;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </section>
+            <section id="content-section-8">
+                <div class="gdlr-parallax-wrapper gdlr-background-image gdlr-show-all no-skin"
+                    id="gdlr-parallax-wrapper-2" data-bgspeed="0.1"
+                    style="background-image: url('{{asset('upload/rokok1.jpg')}}'); padding-top: 100px; padding-bottom: 70px; ">
+                    <div class="container">
+                        <div class="three columns">
+                            <div class="gdlr-skill-item-wrapper gdlr-skin-content gdlr-item gdlr-style-1">
+                                <div class="gdlr-skill-item-title" style="color: #ffffff;">350</div>
+                                <div class="gdlr-skill-item-divider" style="border-color: #ffffff;"></div>
+                                <div class="gdlr-skill-item-caption" style="color: #ffffff;">Employees</div>
+                            </div>
+                        </div>
+                        <div class="three columns">
+                            <div class="gdlr-skill-item-wrapper gdlr-skin-content gdlr-item gdlr-style-1">
+                                <div class="gdlr-skill-item-title" style="color: #ffffff;">12000</div>
+                                <div class="gdlr-skill-item-divider" style="border-color: #ffffff;"></div>
+                                <div class="gdlr-skill-item-caption" style="color: #ffffff;">Square Feet</div>
+                            </div>
+                        </div>
+                        <div class="three columns">
+                            <div class="gdlr-skill-item-wrapper gdlr-skin-content gdlr-item gdlr-style-1">
+                                <div class="gdlr-skill-item-title" style="color: #ffffff;">2400</div>
+                                <div class="gdlr-skill-item-divider" style="border-color: #ffffff;"></div>
+                                <div class="gdlr-skill-item-caption" style="color: #ffffff;">Happy Clients</div>
+                            </div>
+                        </div>
+                        <div class="three columns">
+                            <div class="gdlr-skill-item-wrapper gdlr-skin-content gdlr-item gdlr-style-1">
+                                <div class="gdlr-skill-item-title" style="color: #ffffff;">350</div>
+                                <div class="gdlr-skill-item-divider" style="border-color: #ffffff;"></div>
+                                <div class="gdlr-skill-item-caption" style="color: #ffffff;">Employees</div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </section>
+            <section id="content-section-9">
+                <div class="gdlr-parallax-wrapper gdlr-background-image gdlr-show-all gdlr-skin-dark-skin"
+                    id="gdlr-parallax-wrapper-3" data-bgspeed="0"
+                    style="background-image: url('{{asset('upload/rokok3.jpg')}}'); padding-top: 80px; padding-bottom: 65px; ">
+                    <div class="container">
+                        <div class="six columns">
+                            <div class="gdlr-item-title-wrapper gdlr-item  gdlr-left gdlr-large ">
+                                <div class="gdlr-item-title-container container">
+                                    <div class="gdlr-item-title-head">
+                                        <h3 class="gdlr-item-title gdlr-skin-title gdlr-skin-border">Our Vision
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gdlr-item gdlr-content-item">
+                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus,
+                                    porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet,
+                                    consectetur adipiscing elit. Donec id elit non mi porta gravida at eget
+                                    metus. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque
+                                    penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi leo
+                                    risus, porta ac consectetur ac, vestibulum at eros. Curabitur blandit tempus
+                                    porttitor. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae
+                                    elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem
+                                    lacinia quam venenatis vestibulum. Praesent commodo cursus magna, vel
+                                    scelerisque nisl consectetur et. Nullam id dolor id nibh ultricies vehicula
+                                    ut id elit.</p>
+                                <p>
+                                    <a href="upload/wood-vision-sig.png"><img
+                                            class="alignnone size-full wp-image-5420"
+                                            src="upload/wood-vision-sig.png" alt="wood-vision-sig" width="197"
+                                            height="34" /></a>
+                                </p>
+                                <p><strong>Paul Heizenberg</strong>
+                                    <br /> CEO of Total Factory
+                                </p>
+                            </div>
+                        </div>
+                        <div class="six columns"></div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </section>
+            <section id="content-section-10">
+                <div class="gdlr-color-wrapper  gdlr-show-all no-skin"
+                    style="background-color: #f7f7f7; padding-top: 70px; padding-bottom: 10px; ">
+                    <div class="container">
+                        <div
+                            class="gdlr-item-title-wrapper gdlr-item  gdlr-nav-container gdlr-left gdlr-medium ">
+                            <div class="gdlr-item-title-container container">
+                                <div class="gdlr-item-title-head">
+                                    <h3 class="gdlr-item-title gdlr-skin-title gdlr-skin-border">Recent News
+                                    </h3><a class="gdlr-item-title-link" href="#">Read All News</a><span
+                                        class="gdlr-nav-title"><i class="icon-angle-left gdlr-flex-prev"></i><i
+                                            class="icon-angle-right gdlr-flex-next"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-item-wrapper">
+                            <div class="blog-item-holder">
+                                <div class="gdlr-blog-carousel-item gdlr-item">
+                                    <div class="flexslider" data-type="carousel"
+                                        data-nav-container="blog-item-wrapper" data-columns="3">
+                                        <ul class="slides">
+                                            <li class="gdlr-item gdlr-blog-grid gdlr-skin-box">
+                                                <article id="post-2255"
+                                                    class="post-2255 post type-post status-publish format-standard has-post-thumbnail hentry category-post-slider tag-blog tag-life-style">
+                                                    <div class="gdlr-standard-style">
+                                                        <div class="gdlr-blog-thumbnail">
+                                                            <a href="#"> <img
+                                                                    src="{{asset('gambar/img1.jpeg')}}"
+                                                                    alt="" width="400" height="300" /></a>
+                                                        </div>
+
+                                                        <div class="gdlr-blog-grid-content">
+                                                            <header class="post-header">
+                                                                <div class="gdlr-blog-info">
+                                                                    <div
+                                                                        class="blog-info blog-date gdlr-skin-info">
+                                                                        <span class="gdlr-sep">/</span><a
+                                                                            href="#">21 Mar 2014</a>
+                                                                    </div>
+                                                                    <div
+                                                                        class="blog-info blog-author gdlr-skin-info">
+                                                                        <span class="gdlr-sep">/</span>By <a
+                                                                            href="#" title="Posts by John Doe"
+                                                                            rel="author">John Doe</a>
+                                                                    </div>
+                                                                    <div class="clear"></div>
+                                                                </div>
+
+                                                                <h3 class="gdlr-blog-title"><a href="#">Sem
+                                                                        Porta Mollis Parturi</a></h3>
+                                                                <div class="clear"></div>
+                                                            </header>
+                                                            <!-- entry-header -->
+
+                                                            <div class="gdlr-blog-content">Lorem ipsum dolor sit
+                                                                amet, consectetur adipisici elit, sed eiusmod
+                                                                tempor incidunt ut labore et dolore magna
+                                                                aliqua. Idque Caesaris facere voluntate liceret:
+                                                                sese habere....
+                                                                <div class="clear"></div><a href="#"
+                                                                    class="excerpt-read-more">Read More</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                                <!-- #post -->
+                                            </li>
+                                            <li class="gdlr-item gdlr-blog-grid gdlr-skin-box">
+                                                <article id="post-2254"
+                                                    class="post-2254 post type-post status-publish format-standard has-post-thumbnail hentry category-post-slider tag-blog tag-life-style">
+                                                    <div class="gdlr-standard-style">
+                                                        <div class="gdlr-blog-thumbnail">
+                                                            <a href="#"> <img
+                                                                    src="{{asset('gambar/img1.jpeg')}}"
+                                                                    alt="" width="400" height="300" /></a>
+                                                        </div>
+
+                                                        <div class="gdlr-blog-grid-content">
+                                                            <header class="post-header">
+                                                                <div class="gdlr-blog-info">
+                                                                    <div
+                                                                        class="blog-info blog-date gdlr-skin-info">
+                                                                        <span class="gdlr-sep">/</span><a
+                                                                            href="#">21 Mar 2014</a>
+                                                                    </div>
+                                                                    <div
+                                                                        class="blog-info blog-author gdlr-skin-info">
+                                                                        <span class="gdlr-sep">/</span>By <a
+                                                                            href="#" title="Posts by John Doe"
+                                                                            rel="author">John Doe</a>
+                                                                    </div>
+                                                                    <div class="clear"></div>
+                                                                </div>
+
+                                                                <h3 class="gdlr-blog-title"><a href="#">Nullam
+                                                                        Lorem Mattis Purus</a></h3>
+                                                                <div class="clear"></div>
+                                                            </header>
+                                                            <!-- entry-header -->
+
+                                                            <div class="gdlr-blog-content">Lorem ipsum dolor sit
+                                                                amet, consectetur adipisici elit, sed eiusmod
+                                                                tempor incidunt ut labore et dolore magna
+                                                                aliqua. Idque Caesaris facere voluntate liceret:
+                                                                sese habere....
+                                                                <div class="clear"></div><a href="#"
+                                                                    class="excerpt-read-more">Read More</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                                <!-- #post -->
+                                            </li>
+                                            <li class="gdlr-item gdlr-blog-grid gdlr-skin-box">
+                                                <article id="post-2249"
+                                                    class="post-2249 post type-post status-publish format-standard has-post-thumbnail hentry category-post-slider tag-blog tag-life-style">
+                                                    <div class="gdlr-standard-style">
+                                                        <div class="gdlr-blog-thumbnail">
+                                                            <a href="#"> <img
+                                                                    src="{{asset('gambar/img1.jpeg')}}"
+                                                                    alt="" width="400" height="300" /></a>
+                                                        </div>
+
+                                                        <div class="gdlr-blog-grid-content">
+                                                            <header class="post-header">
+                                                                <div class="gdlr-blog-info">
+                                                                    <div
+                                                                        class="blog-info blog-date gdlr-skin-info">
+                                                                        <span class="gdlr-sep">/</span><a
+                                                                            href="#">21 Mar 2014</a>
+                                                                    </div>
+                                                                    <div
+                                                                        class="blog-info blog-author gdlr-skin-info">
+                                                                        <span class="gdlr-sep">/</span>By <a
+                                                                            href="#" title="Posts by John Doe"
+                                                                            rel="author">John Doe</a>
+                                                                    </div>
+                                                                    <div class="clear"></div>
+                                                                </div>
+
+                                                                <h3 class="gdlr-blog-title"><a href="#">Nibh Sem
+                                                                        Sit Ullamcorper</a></h3>
+                                                                <div class="clear"></div>
+                                                            </header>
+                                                            <!-- entry-header -->
+
+                                                            <div class="gdlr-blog-content">Lorem ipsum dolor sit
+                                                                amet, consectetur adipisici elit, sed eiusmod
+                                                                tempor incidunt ut labore et dolore magna
+                                                                aliqua. Idque Caesaris facere voluntate liceret:
+                                                                sese habere....
+                                                                <div class="clear"></div><a href="#"
+                                                                    class="excerpt-read-more">Read More</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                                <!-- #post -->
+                                            </li>
+                                            <li class="gdlr-item gdlr-blog-grid gdlr-skin-box">
+                                                <article id="post-852"
+                                                    class="post-852 post type-post status-publish format-standard has-post-thumbnail hentry category-fit-row tag-blog tag-life-style">
+                                                    <div class="gdlr-standard-style">
+                                                        <div class="gdlr-blog-thumbnail">
+                                                            <a href="#"> <img
+                                                                    src="{{asset('gambar/img1.jpeg')}}"
+                                                                    alt="" width="400" height="300" /></a>
+                                                        </div>
+
+                                                        <div class="gdlr-blog-grid-content">
+                                                            <header class="post-header">
+                                                                <div class="gdlr-blog-info">
+                                                                    <div
+                                                                        class="blog-info blog-date gdlr-skin-info">
+                                                                        <span class="gdlr-sep">/</span><a
+                                                                            href="#">03 Dec 2013</a>
+                                                                    </div>
+                                                                    <div
+                                                                        class="blog-info blog-author gdlr-skin-info">
+                                                                        <span class="gdlr-sep">/</span>By <a
+                                                                            href="#" title="Posts by John Doe"
+                                                                            rel="author">John Doe</a>
+                                                                    </div>
+                                                                    <div class="clear"></div>
+                                                                </div>
+
+                                                                <h3 class="gdlr-blog-title"><a href="#">Donec
+                                                                        luctus imperdiet</a></h3>
+                                                                <div class="clear"></div>
+                                                            </header>
+                                                            <!-- entry-header -->
+
+                                                            <div class="gdlr-blog-content">Lorem ipsum dolor sit
+                                                                amet, consectetur adipisici elit, sed eiusmod
+                                                                tempor incidunt ut labore et dolore magna
+                                                                aliqua. Idque Caesaris facere voluntate liceret:
+                                                                sese habere....
+                                                                <div class="clear"></div><a href="#"
+                                                                    class="excerpt-read-more">Read More</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                                <!-- #post -->
+                                            </li>
+                                            <li class="gdlr-item gdlr-blog-grid gdlr-skin-box">
+                                                <article id="post-862"
+                                                    class="post-862 post type-post status-publish format-standard has-post-thumbnail hentry category-blog category-fit-row tag-blog tag-link tag-news">
+                                                    <div class="gdlr-standard-style">
+                                                        <div class="gdlr-blog-thumbnail">
+                                                            <a href="#"> <img
+                                                                    src="upload/shutterstock_21271114-400x300.jpg"
+                                                                    alt="" width="400" height="300" /></a>
+                                                        </div>
+
+                                                        <div class="gdlr-blog-grid-content">
+                                                            <header class="post-header">
+                                                                <div class="gdlr-blog-info">
+                                                                    <div
+                                                                        class="blog-info blog-date gdlr-skin-info">
+                                                                        <span class="gdlr-sep">/</span><a
+                                                                            href="#">03 Dec 2013</a>
+                                                                    </div>
+                                                                    <div
+                                                                        class="blog-info blog-author gdlr-skin-info">
+                                                                        <span class="gdlr-sep">/</span>By <a
+                                                                            href="#" title="Posts by John Doe"
+                                                                            rel="author">John Doe</a>
+                                                                    </div>
+                                                                    <div class="clear"></div>
+                                                                </div>
+
+                                                                <h3 class="gdlr-blog-title"><a href="#">Magna
+                                                                        pars studiorum</a></h3>
+                                                                <div class="clear"></div>
+                                                            </header>
+                                                            <!-- entry-header -->
+
+                                                            <div class="gdlr-blog-content">Lorem ipsum dolor sit
+                                                                amet, consectetur adipisici elit, sed eiusmod
+                                                                tempor incidunt ut labore et dolore magna
+                                                                aliqua. Idque Caesaris facere voluntate liceret:
+                                                                sese habere....
+                                                                <div class="clear"></div><a href="#"
+                                                                    class="excerpt-read-more">Read More</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                                <!-- #post -->
+                                            </li>
+                                            <li class="gdlr-item gdlr-blog-grid gdlr-skin-box">
+                                                <article id="post-859"
+                                                    class="post-859 post type-post status-publish format-standard has-post-thumbnail hentry category-blog category-fit-row">
+                                                    <div class="gdlr-standard-style">
+                                                        <div class="gdlr-blog-thumbnail">
+                                                            <a href="#"> <img
+                                                                    src="upload/shutterstock_64706734-400x300.jpg"
+                                                                    alt="" width="400" height="300" /></a>
+                                                        </div>
+
+                                                        <div class="gdlr-blog-grid-content">
+                                                            <header class="post-header">
+                                                                <div class="gdlr-blog-info">
+                                                                    <div
+                                                                        class="blog-info blog-date gdlr-skin-info">
+                                                                        <span class="gdlr-sep">/</span><a
+                                                                            href="#">03 Dec 2013</a>
+                                                                    </div>
+                                                                    <div
+                                                                        class="blog-info blog-author gdlr-skin-info">
+                                                                        <span class="gdlr-sep">/</span>By <a
+                                                                            href="#" title="Posts by John Doe"
+                                                                            rel="author">John Doe</a>
+                                                                    </div>
+                                                                    <div class="clear"></div>
+                                                                </div>
+
+                                                                <h3 class="gdlr-blog-title"><a href="#">Sedial
+                                                                        eiusmod tempor</a></h3>
+                                                                <div class="clear"></div>
+                                                            </header>
+                                                            <!-- entry-header -->
+
+                                                            <div class="gdlr-blog-content">Lorem ipsum dolor sit
+                                                                amet, consectetur adipisici elit, sed eiusmod
+                                                                tempor incidunt ut labore et dolore magna
+                                                                aliqua. Idque Caesaris facere voluntate liceret:
+                                                                sese habere....
+                                                                <div class="clear"></div><a href="#"
+                                                                    class="excerpt-read-more">Read More</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                                <!-- #post -->
+                                            </li>
+                                        </ul>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </section>
+            <section id="content-section-11">
+                <div class="gdlr-color-wrapper  gdlr-show-all no-skin"
+                    style="background-color: #ffffff; padding-top: 70px; padding-bottom: 20px; ">
+                    <div class="container">
+                        <div class="one-fifth column"></div>
+                        <div class="three-fifth columns">
+                            <div class="gdlr-testimonial-item-wrapper" style="margin-bottom: 40px;">
+                                <div class="gdlr-item-title-wrapper gdlr-item  gdlr-center gdlr-medium ">
+                                    <div class="gdlr-item-title-container container">
+                                        <div class="gdlr-item-title-head">
+                                            <h3 class="gdlr-item-title gdlr-skin-title gdlr-skin-border">
+                                                Testimonial</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gdlr-item gdlr-testimonial-item carousel large plain-style">
+                                    <div class="gdlr-ux gdlr-testimonial-ux">
+                                        <div class="flexslider" data-type="carousel"
+                                            data-nav-container="gdlr-testimonial-item" data-columns="1">
+                                            <ul class="slides">
+                                                <li class="testimonial-item">
+                                                    <div class="testimonial-content gdlr-skin-content">
+                                                        <p>Etiam porta sem malesuada magna mollis euismod.
+                                                            Maecenas faucibus mollis interdum. Donec ullamcorper
+                                                            nulla non metus auctor fringilla. Nullam id dolor id
+                                                            nibh ultricies vehicula ut id elit. Lorem ipsum
+                                                            dolor sit amet, consectetur.</p>
+                                                    </div>
+                                                    <div class="testimonial-info"><span
+                                                            class="testimonial-author gdlr-skin-link-color">John
+                                                            Smoth<span>, </span></span><span
+                                                            class="testimonial-position gdlr-skin-info">Furniture
+                                                            Fact</span></div>
+                                                </li>
+                                                <li class="testimonial-item">
+                                                    <div class="testimonial-content gdlr-skin-content">
+                                                        <p>Nulla vitae elit libero, a pharetra augue. Vivamus
+                                                            sagittis lacus vel augue laoreet rutrum faucibus
+                                                            dolor auctor. Donec id elit non mi porta gravida at
+                                                            eget metus. Maecenas faucibus mollis interdum.</p>
+                                                    </div>
+                                                    <div class="testimonial-info"><span
+                                                            class="testimonial-author gdlr-skin-link-color">Paul
+                                                            Johnson<span>, </span></span><span
+                                                            class="testimonial-position gdlr-skin-info">Apple</span>
+                                                    </div>
+                                                </li>
+                                                <li class="testimonial-item">
+                                                    <div class="testimonial-content gdlr-skin-content">
+                                                        <p>Fusce dapibus, tellus ac cursus commodo, tortor
+                                                            mauris condimentum nibh, ut fermentum massa justo
+                                                            sit amet risus. Nullam quis risus eget urna mollis
+                                                            ornare vel eu leo. Aenean lacinia bibendum nulla sed
+                                                            consectetur.</p>
+                                                    </div>
+                                                    <div class="testimonial-info"><span
+                                                            class="testimonial-author gdlr-skin-link-color">Alan
+                                                            Smith<span>, </span></span><span
+                                                            class="testimonial-position gdlr-skin-info">Wooden
+                                                            Corp.</span></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gdlr-item-title-nav gdlr-nav-container  gdlr-center gdlr-large"><i
+                                        class="icon-angle-left gdlr-flex-prev"></i><i
+                                        class="icon-angle-right gdlr-flex-next"></i></div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </section>
+            <section id="content-section-12">
+                <div class="gdlr-color-wrapper  gdlr-show-all no-skin"
+                    style="background-color: #ffffff;  border-top: 2px solid #e9e9e9; padding-top: 50px; padding-bottom: 15px; ">
+                    <div class="container">
+                        <div class="gdlr-banner-item-wrapper">
+                            <div class="gdlr-banner-images gdlr-item">
+                                <div class="flexslider" data-pausetime="7000" data-slidespeed="600"
+                                    data-effect="fade" data-columns="5" data-type="carousel"
+                                    data-nav-container="gdlr-banner-images">
+                                    <ul class="slides">
+                                        <li><img src="upload/banner-1.png" alt="" width="147" height="58" />
+                                        </li>
+                                        <li><img src="upload/banner-2.png" alt="" width="151" height="59" />
+                                        </li>
+                                        <li><img src="upload/banner-3.png" alt="" width="184" height="58" />
+                                        </li>
+                                        <li><img src="upload/banner-4.png" alt="" width="128" height="59" />
+                                        </li>
+                                        <li><img src="upload/banner-5.png" alt="" width="128" height="59" />
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </section>
+            <section id="content-section-13">
+                <div class="gdlr-color-wrapper  gdlr-show-all gdlr-skin-service-half"
+                    style="background-color: #313131; padding-top: 75px; padding-bottom: 52px; ">
+                    <div class="container">
+                        <div class="gdlr-item-title-wrapper gdlr-item  gdlr-left gdlr-large ">
+                            <div class="gdlr-item-title-container container">
+                                <div class="gdlr-item-title-head">
+                                    <h3 class="gdlr-item-title gdlr-skin-title gdlr-skin-border">Get Social</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gdlr-item gdlr-content-item">
+                            <p>Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante
+                                venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra
+                                augue. Nulla vitae elit libero, a pharetra augue. Cum sociis natoque penatibus
+                                et magnis dis parturient montes, nascetur ridiculus mus.  Donec id elit non mi
+                                porta gravida at eget metus. Donec id elit non mi porta gravida at eget metus.
+                                Vestibulum id ligula porta felis euismod semper.</p>
+                            <span class="clear"></span><span class="gdlr-space"
+                                style="margin-top: 35px; display: block;"></span>
+
+                            <span class="gdlr-icon-shortcode">
+                                <a href="#" target="blank">
+                                    <i class="gdlr-icon fa fa-facebook"
+                                        style="vertical-align: middle; color: #36bddb; font-size: 24px; "></i>
+                                </a>
+                                <span class="gdlr-icon-inline-text"
+                                    style="font-weight: bold; text-transform: uppercase; margin-left: 6px; color: #ffffff; padding-right: 33px; font-size: 13px; ">Facebook</span>
+                            </span>
+                            <span class="gdlr-icon-shortcode">
+                                <a href="#" target="blank">
+                                    <i class="gdlr-icon fa fa-twitter"
+                                        style="vertical-align: middle; color: #36bddb; font-size: 24px; "></i>
+                                </a>
+                                <span class="gdlr-icon-inline-text"
+                                    style="font-weight: bold; text-transform: uppercase; margin-left: 6px; color: #ffffff; padding-right: 33px; font-size: 13px; ">Twitter</span>
+                            </span>
+                            <span class="gdlr-icon-shortcode">
+                                <a href="#" target="blank">
+                                    <i class="gdlr-icon fa fa-instagram"
+                                        style="vertical-align: middle; color: #36bddb; font-size: 24px; "></i>
+                                </a>
+                                <span class="gdlr-icon-inline-text"
+                                    style="font-weight: bold; text-transform: uppercase; margin-left: 6px; color: #ffffff; padding-right: 33px; font-size: 13px; ">Instagram</span>
+                            </span>
+                            <span class="gdlr-icon-shortcode">
+                                <a href="#" target="blank">
+                                    <i class="gdlr-icon fa fa-google-plus"
+                                        style="vertical-align: middle; color: #36bddb; font-size: 24px; "></i>
+                                </a>
+                                <span class="gdlr-icon-inline-text"
+                                    style="font-weight: bold; text-transform: uppercase; margin-left: 6px; color: #ffffff; padding-right: 33px; font-size: 13px; ">Google
+                                    Plus</span>
+                            </span>
+                            <span class="gdlr-icon-shortcode">
+                                <a href="#" target="blank">
+                                    <i class="gdlr-icon fa fa-pinterest"
+                                        style="vertical-align: middle; color: #36bddb; font-size: 24px; "></i>
+                                </a>
+                                <span class="gdlr-icon-inline-text"
+                                    style="font-weight: bold; text-transform: uppercase; margin-left: 6px; color: #ffffff; padding-right: 33px; font-size: 13px; ">Pinterest</span>
+                            </span>
+                            <span class="gdlr-icon-shortcode">
+                                <a href="#" target="blank">
+                                    <i class="gdlr-icon fa fa-vimeo"
+                                        style="vertical-align: middle; color: #36bddb; font-size: 24px; "></i>
+                                </a>
+                                <span class="gdlr-icon-inline-text"
+                                    style="font-weight: bold; text-transform: uppercase; margin-left: 6px; color: #ffffff; padding-right: 33px; font-size: 13px; ">Vimeo</span>
+                            </span>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </section>
+        </div>
+        <!-- Below Sidebar Section-->
+
+    </div>
+    <!-- gdlr-content -->
+    <div class="clear"></div>
+
+@endsection

@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Vimi;
-use Illuminate\Http\Request;
 use App\Models\Misi;
+use Illuminate\Http\Request;
 
-class ProfileController extends Controller
+class MisiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,10 +14,8 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        $vimi = Vimi::with('target')->get();
         $misi = Misi::all();
-        // return dd($vimi);
-        return view('menu.profile', ['vimi' => $vimi, 'misi' => $misi]);
+        return redirect()->route('profile.index');
     }
 
     /**
@@ -39,7 +36,12 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $misi = new Misi;
+        $misi->misi = $request->get('misi');
+        $misi->save();
+
+        return redirect('profile');
     }
 
     /**

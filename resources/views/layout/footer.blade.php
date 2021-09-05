@@ -135,7 +135,7 @@
 <!-- Button trigger modal -->
 
 
-  <!-- Modal -->
+  <!-- Modal Edit Produk-->
   <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
@@ -176,6 +176,75 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{-- Input Target Modal --}}
+  <div class="modal fade" id="inputTargetModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Edit Misi</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <h1>Tambah Visi</h1>
+            <form action="{{route('target.store')}}" method="POST" enctype="multipart/form-data">
+                @csrf
+
+                <div class="form-group row mt-5">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Target</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control form-control-lg" name="kategori" id="kategori" placeholder="Target">
+                    </div>
+                </div>
+
+                <div class="form-group mt-5" style="text-align: right;">
+                    <!-- <div class="col-sm-10"> -->
+                    <button type="submit" class="btn btn-primary" name="simpan">Tambah</button>
+                    <a href="{{route('product.index')}}" class="btn btn-danger">Kembali</a>
+                    <!-- </div> -->
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{-- Input misi Modal --}}
+  <div class="modal fade" id="inputMisiModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Edit Misi</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <h1>Tambah Misi</h1>
+            <form action="{{route('misi.store')}}" method="POST" enctype="multipart/form-data">
+                @csrf
+
+                <div class="form-group row mt-5">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Misi</label>
+                    <div class="col-sm-10">
+                        {{-- <input type="text" class="form-control form-control-lg" name="kategori" id="kategori" placeholder="Target"> --}}
+                        <textarea name="misi" id="misi" class="form-control" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group mt-5" style="text-align: right;">
+                    <!-- <div class="col-sm-10"> -->
+                    <button type="submit" class="btn btn-primary" name="simpan">Tambah</button>
+                    <a href="{{route('product.index')}}" class="btn btn-danger">Kembali</a>
+                    <!-- </div> -->
+                </div>
+            </form>
         </div>
       </div>
     </div>

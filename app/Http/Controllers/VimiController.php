@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Target;
 use App\Models\Vimi;
+use GuzzleHttp\Promise\Create;
 use Illuminate\Http\Request;
-use App\Models\Misi;
 
-class ProfileController extends Controller
+class VimiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +17,8 @@ class ProfileController extends Controller
     public function index()
     {
         $vimi = Vimi::with('target')->get();
-        $misi = Misi::all();
         // return dd($vimi);
-        return view('menu.profile', ['vimi' => $vimi, 'misi' => $misi]);
+        return view('profile', ['vimi' => $vimi]);
     }
 
     /**
@@ -28,7 +28,8 @@ class ProfileController extends Controller
      */
     public function create()
     {
-        //
+        $target = Target::all();
+        return view('admin.inputVisi', ['target' => $target]);
     }
 
     /**
@@ -39,7 +40,12 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Vimi::create($request->all());
+        $visi = new Vimi;
+        $visi->visi = $request->get('visi');
+        $visi->idtarget = $request->get('idtarget');
+
+        return redirect('profile');
     }
 
     /**

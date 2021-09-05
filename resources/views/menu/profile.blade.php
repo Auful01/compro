@@ -16,8 +16,8 @@
                         <div class="gdlr-item-title-wrapper gdlr-item  gdlr-center gdlr-extra-large ">
                             <div class="gdlr-item-title-container container">
                                 <div class="gdlr-item-title-head">
-                                    <h3 class="gdlr-item-title gdlr-skin-title gdlr-skin-border">About Total Business</h3>
-                                    <div class="gdlr-item-title-caption gdlr-skin-info">Donec ullamcorper nulla non metus auctor</div>
+                                    <h3 class="gdlr-item-title gdlr-skin-title gdlr-skin-border">Tentang Kami</h3>
+                                    <div class="gdlr-item-title-caption gdlr-skin-info">PT. Sehat Selalu Banyak Rejeki</div>
                                 </div>
                             </div>
                         </div>
@@ -34,28 +34,47 @@
                     <div class="six columns">
                         <div class="gdlr-item gdlr-about-us-item gdlr-plain">
                             <div class="about-us-title-wrapper">
-                                <h3 class="about-us-title">Our Story</h3>
+                                <h3 class="about-us-title">Misi Perusahaan</h3>
                                 <div class="about-us-title-divider"></div>
                             </div>
                             <div class="about-us-content-wrapper">
                                 <div class="about-us-content gdlr-skin-content">
-                                    <p>Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Nulla vitae elit libero, a pharetra augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  Donec id elit non mi porta gravida at eget metus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Aenean eu leo quam. </p>
+                                    <ul style="left: 0;margin-left: -5px">
+                                        @foreach ($misi as $m)
+                                            <li>{{$m->misi}}</li>
+                                            <a href="#" class="btn btn-sm btn-danger"><img src="https://img.icons8.com/material-outlined/24/000000/trash--v2.png"/></a>
+                                            <a href="" class="btn btn-sm btn-warning"><img src="https://img.icons8.com/material-outlined/24/000000/pencil--v3.png"/></a>
+                                        @endforeach
+                                    </ul>
+
                                 </div>
                             </div>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#inputMisiModal">
+                                Tambah Misi
+                              </button>
                             <div class="clear"></div>
                         </div>
                     </div>
                     <div class="six columns">
                         <div class="gdlr-item gdlr-about-us-item gdlr-plain">
                             <div class="about-us-title-wrapper">
-                                <h3 class="about-us-title">Our Vision</h3>
+                                <h3 class="about-us-title">Visi Perusahaan</h3>
                                 <div class="about-us-title-divider"></div>
                             </div>
                             <div class="about-us-content-wrapper">
                                 <div class="about-us-content gdlr-skin-content">
-                                    <p>Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Nulla vitae elit libero, a pharetra augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  Donec id elit non mi porta gravida at eget metus. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Aenean eu leo quam. </p>
+                                    @foreach ($vimi as $v)
+                                        <h3>{{$v->target->kategori}}</h3>
+                                        <p>{{$v->visi}}</p>
+                                        <a href="" class="btn btn-sm btn-danger"><img src="https://img.icons8.com/material-outlined/24/000000/trash--v2.png"/></a>
+                                        <a href="" class="btn btn-sm btn-warning"><img src="https://img.icons8.com/material-outlined/24/000000/pencil--v3.png"/></a>
+                                        <br>
+                                    @endforeach
                                 </div>
                             </div>
+                            <a href="{{route('vimi.create')}}" class="btn btn-primary">Tambah Visi</a>
+
+                            {{-- <a href="{{route('vimi.create')}}" class="btn btn-primary">Tambah Misi</a> --}}
                             <div class="clear"></div>
                         </div>
                     </div>
@@ -65,7 +84,7 @@
             <div class="clear"></div>
         </section>
         <section id="content-section-3">
-            <div class="gdlr-parallax-wrapper gdlr-background-image gdlr-show-all gdlr-skin-dark-skin" id="gdlr-parallax-wrapper-2" data-bgspeed="0" style="background-image: url('upload/wood-stunning-bg-2.jpg'); padding-top: 135px; padding-bottom: 105px; ">
+            <div class="gdlr-parallax-wrapper gdlr-background-image gdlr-show-all gdlr-skin-dark-skin" id="gdlr-parallax-wrapper-2" data-bgspeed="0" style="background-image: url('{{asset('upload/rokok3.jpg')}}'); padding-top: 135px; padding-bottom: 105px; ">
                 <div class="container">
                     <div class="gdlr-stunning-item-ux gdlr-ux">
                         <div class="gdlr-item gdlr-stunning-item gdlr-button-on gdlr-stunning-center">

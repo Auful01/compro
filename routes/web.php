@@ -1,8 +1,11 @@
 <?php
 
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\MisiController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\TargetController;
+use App\Http\Controllers\VimiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,3 +37,6 @@ Route::resource('profile', ProfileController::class);
 Route::get('/tambah-produk', function () {
     return view('admin.inputProduct');
 });
+Route::resource('vimi', VimiController::class);
+Route::resource('target', TargetController::class);
+Route::resource('misi', MisiController::class);

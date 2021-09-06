@@ -42,8 +42,8 @@
                                     <ul style="left: 0;margin-left: -5px">
                                         @foreach ($misi as $m)
                                             <li>{{$m->misi}}</li>
-                                            <a href="#" class="btn btn-sm btn-danger"><img src="https://img.icons8.com/material-outlined/24/000000/trash--v2.png"/></a>
-                                            <a href="" class="btn btn-sm btn-warning"><img src="https://img.icons8.com/material-outlined/24/000000/pencil--v3.png"/></a>
+                                            <a href="#" class="btn btn-sm btn-danger" ><img src="https://img.icons8.com/material-outlined/24/000000/trash--v2.png"/></a>
+                                            <a href="" class="btn btn-sm btn-warning " data-toggle="modal" data-target="#editMisiModal"><img src="https://img.icons8.com/material-outlined/24/000000/pencil--v3.png"/></a>
                                         @endforeach
                                     </ul>
 
@@ -67,7 +67,8 @@
                                         <h3>{{$v->target->kategori}}</h3>
                                         <p>{{$v->visi}}</p>
                                         <a href="" class="btn btn-sm btn-danger"><img src="https://img.icons8.com/material-outlined/24/000000/trash--v2.png"/></a>
-                                        <a href="" class="btn btn-sm btn-warning"><img src="https://img.icons8.com/material-outlined/24/000000/pencil--v3.png"/></a>
+                                        {{-- <a href="" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#editVisiModal"  id="editVisiModal"><img src="https://img.icons8.com/material-outlined/24/000000/pencil--v3.png"/></a> --}}
+                                        <a href="" class="btn btn-sm btn-warning btn-modal-editVisi "  data-toggle="modal"  data-target="#editVisiModal"><img src="https://img.icons8.com/material-outlined/24/000000/pencil--v3.png"/></a>
                                         <br>
                                     @endforeach
                                 </div>
@@ -228,5 +229,8 @@
 </div>
 <!-- gdlr-content -->
 <div class="clear"></div>
+
+
+
 
 @endsection

@@ -80,23 +80,25 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {
 
-        $request->validate([
-            'id' => 'required',
-            'nama_produk' => 'required',
-            'gambar' => 'required',
-            'deskripsi' => 'required'
+        // $request->validate([
+        //     'id' => 'required',
+        //     'nama_produk' => 'required',
+        //     'gambar' => 'required',
+        //     'deskripsi' => 'required'
 
-        ]);
-
-        $product = Product::all();
+        // ]);
+        // return $request;
+        $product = Product::where('id', $id)->first();
         $product->nama_produk = $request->get('nama');
-        $product->deskripsi = $request->get('desc');
-        $product->save();
-        if ($product->gambar && file_exists(storage_path('app/public/gambar' . $product->gambar))) {
-            Storage::delete('public/gambar' . $product->gambar);
+        $product->deskripsi = $request->get('deskripsi');
+        if ($request->file('gambar') != null) {
+            Storage::delete('public/' . $product->gambar);
+            $img_name = $request->file('gambar')->store('gambar', 'public');
+        } else {
+            $img_name = $request->gambarlama;
         }
-        $img_name = $request->file('gambar')->store('gambar', 'public');
         $product->gambar = $img_name;
+
         $product->save();
 
         return redirect()->route('product.index');
@@ -110,6 +112,8 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // return $id;
+        Product::where('id', $id)->delete();
+        return redirect()->route('product.index');
     }
 }

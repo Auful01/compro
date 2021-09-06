@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Vimi;
 use Illuminate\Http\Request;
 use App\Models\Misi;
+use App\Models\Target;
 
 class ProfileController extends Controller
 {
@@ -17,8 +18,9 @@ class ProfileController extends Controller
     {
         $vimi = Vimi::with('target')->get();
         $misi = Misi::all();
+        $target = Target::all();
         // return dd($vimi);
-        return view('menu.profile', ['vimi' => $vimi, 'misi' => $misi]);
+        return view('menu.profile', ['vimi' => $vimi, 'misi' => $misi, 'target' => $target]);
     }
 
     /**

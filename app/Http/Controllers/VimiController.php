@@ -79,7 +79,12 @@ class VimiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $vimi = Vimi::with('target')->where('id', $id);
+        $vimi->visi = $request->get('visi');
+        $vimi->idtarget = $request->get('idtarget');
+        $vimi->save();
+
+        return redirect()->route('profile.index');
     }
 
     /**

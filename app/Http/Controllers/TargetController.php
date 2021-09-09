@@ -15,7 +15,7 @@ class TargetController extends Controller
     public function index()
     {
         $target = Target::all();
-        return view('admin.inputVisiMisi', ['target' => $target]);
+        return view('admin.inputVisi', ['target' => $target]);
     }
 
     /**
@@ -26,7 +26,7 @@ class TargetController extends Controller
     public function create()
     {
         $target = Target::all();
-        return view('admin.inputVisiMisi', ['target' => $target]);
+        return view('admin.inputVisi', ['target' => $target]);
     }
 
     /**

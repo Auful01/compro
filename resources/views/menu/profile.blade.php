@@ -43,14 +43,14 @@
                                         @foreach ($misi as $m)
                                             <li>{{$m->misi}}</li>
                                             <a href="#" class="btn btn-sm btn-danger" ><img src="https://img.icons8.com/material-outlined/24/000000/trash--v2.png"/></a>
-                                            <a href="" class="btn btn-sm btn-warning " data-toggle="modal" data-target="#editMisiModal"><img src="https://img.icons8.com/material-outlined/24/000000/pencil--v3.png"/></a>
+                                            <a href="" class="btn btn-sm btn-warning btn-modal-editMisi" data-id="{{$m->id}}"  data-misi="{{$m->misi}}" data-toggle="modal" data-target="#editMisiModal"><img src="https://img.icons8.com/material-outlined/24/000000/pencil--v3.png"/></a>
                                         @endforeach
                                     </ul>
 
                                 </div>
                             </div>
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#inputMisiModal">
-                                Tambah Misi
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tambahMisiModal">
+                                Tambah Visi
                               </button>
                             <div class="clear"></div>
                         </div>
@@ -68,7 +68,7 @@
                                         <p>{{$v->visi}}</p>
                                         <a href="" class="btn btn-sm btn-danger"><img src="https://img.icons8.com/material-outlined/24/000000/trash--v2.png"/></a>
                                         {{-- <a href="" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#editVisiModal"  id="editVisiModal"><img src="https://img.icons8.com/material-outlined/24/000000/pencil--v3.png"/></a> --}}
-                                        <a href="" class="btn btn-sm btn-warning btn-modal-editVisi "  data-toggle="modal"  data-target="#editVisiModal"><img src="https://img.icons8.com/material-outlined/24/000000/pencil--v3.png"/></a>
+                                        <a href="" class="btn btn-sm btn-warning btn-modal-editVisi "  data-toggle="modal" data-id="{{$v->id}}" data-url="{{route('vimi.store', $v->id)}}"  data-idkategori="{{$v->target->id}}" data-kategori="{{$v->target->kategori}}" data-visi="{{$v->visi}}" data-target="#editVisiModal"><img src="https://img.icons8.com/material-outlined/24/000000/pencil--v3.png"/></a>
                                         <br>
                                     @endforeach
                                 </div>
@@ -92,7 +92,7 @@
                             <h2 class="stunning-item-title">It’s The Best WordPress Theme.</h2>
                             <div class="stunning-item-caption gdlr-skin-content">
                                 <p>This theme comes with many awesome features and it suits to any kind of businesses. You will love it!</p>
-                            </div><a class="stunning-item-button gdlr-button " href="#" target="_blank">Learn More</a><a class="stunning-item-button gdlr-button" href="#" target="_blank">Buy Now!</a></div>
+                            </div><a class="stunning-item-button gdlr-button  " href="#" target="_blank">Learn More</a><a class="stunning-item-button gdlr-button" href="#" target="_blank">Buy Now!</a></div>
                     </div>
                     <div class="clear"></div>
                     <div class="clear"></div>
@@ -232,5 +232,96 @@
 
 
 
+
+
+@endsection
+
+
+@section('modal')
+    {{-- Edit Visi Modal  --}}
+
+<div class="modal fade" id="editVisiModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Edit Visi</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <h1>Edit Visi</h1>
+            <form action="" class="url" method="POST" enctype="multipart/form-data">
+                @csrf
+                <div class="form-group row mt-5">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Target</label>
+                    <div class="col-sm-10">
+                        <select class="custom-select code" name="idtarget" id="idtarget">
+                            {{-- <option>Choose...</option>
+                            @foreach ($target as $t)
+                                <option value="{{$t->id}}">{{$t->kategori}}</option>
+                            @endforeach --}}
+                          </select>
+                    </div>
+                </div>
+                <div class="form-group row mt-5">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Visi</label>
+                    <div class="col-sm-10">
+                        {{-- <input type="text" class="form-control form-control-lg" name="kategori" id="kategori" placeholder="Target"> --}}
+                        <textarea name="visi"  id="visi" class="form-control visi" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group mt-5" style="text-align: right;">
+                    <!-- <div class="col-sm-10"> -->
+                    <button type="submit" class="btn btn-primary" name="simpan">Tambah</button>
+                    <a href="{{route('product.index')}}" class="btn btn-danger">Kembali</a>
+                    <!-- </div> -->
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  {{-- Edit Misi Modal --}}
+  <div class="modal fade " id="editMisiModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Sunting Misi</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <h1>Edit Misi</h1>
+            <form action="{{route('misi.store')}}" method="POST" >
+                @csrf
+
+                <div class="form-group row mt-5">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Misi</label>
+                    <div class="col-sm-10">
+                        {{-- <input type="text" class="form-control form-control-lg" name="kategori" id="kategori" placeholder="Target"> --}}
+                        <textarea name="misi" id="misi" class="form-control misi" cols="30" rows="10"></textarea>
+                    {{-- <input type="text" class="misi"> --}}
+
+                    </div>
+
+                </div>
+
+                <div class="form-group mt-5" style="text-align: right;">
+                    <!-- <div class="col-sm-10"> -->
+                    <button type="submit" class="btn btn-primary" name="simpan">Tambah</button>
+                    <a href="{{route('product.index')}}" class="btn btn-danger">Kembali</a>
+                    <!-- </div> -->
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
 @endsection

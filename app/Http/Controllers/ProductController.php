@@ -80,14 +80,6 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {
 
-        // $request->validate([
-        //     'id' => 'required',
-        //     'nama_produk' => 'required',
-        //     'gambar' => 'required',
-        //     'deskripsi' => 'required'
-
-        // ]);
-        // return $request;
         $product = Product::where('id', $id)->first();
         $product->nama_produk = $request->get('nama');
         $product->deskripsi = $request->get('deskripsi');

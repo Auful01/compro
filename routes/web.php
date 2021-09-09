@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\MisiController;
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\TargetController;
@@ -19,12 +21,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/target-list', [VimiController::class, 'targetVisi']);
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/beranda', function () {
-    return view('menu.beranda ');
-});
+Route::resource('/beranda', BerandaController::class);
 Route::get('/nav', function () {
     return view('layout.navbar');
 });
@@ -40,3 +41,4 @@ Route::get('/tambah-produk', function () {
 Route::resource('vimi', VimiController::class);
 Route::resource('target', TargetController::class);
 Route::resource('misi', MisiController::class);
+Route::resource('news', NewsController::class);

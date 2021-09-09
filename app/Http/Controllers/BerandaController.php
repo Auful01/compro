@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Target;
+use App\Models\News;
 use App\Models\Vimi;
-use GuzzleHttp\Promise\Create;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
-class VimiController extends Controller
+class BerandaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +17,9 @@ class VimiController extends Controller
     public function index()
     {
         $vimi = Vimi::with('target')->get();
-        // return dd($vimi);
-        return view('profile', ['vimi' => $vimi]);
+        $news = News::all();
+        // $news = Str::limit($news->berita, 50);
+        return view('menu.beranda', ['vimi' => $vimi, 'news' => $news]);
     }
 
     /**
@@ -28,8 +29,7 @@ class VimiController extends Controller
      */
     public function create()
     {
-        $target = Target::all();
-        return view('admin.inputVisi', ['target' => $target]);
+        //
     }
 
     /**
@@ -40,12 +40,7 @@ class VimiController extends Controller
      */
     public function store(Request $request)
     {
-        Vimi::create($request->all());
-        $visi = new Vimi;
-        $visi->visi = $request->get('visi');
-        $visi->idtarget = $request->get('idtarget');
-
-        return redirect('profile');
+        //
     }
 
     /**
@@ -79,12 +74,7 @@ class VimiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $vimi = Vimi::with('target')->where('id', $id);
-        $vimi->visi = $request->get('visi');
-        $vimi->idtarget = $request->get('idtarget');
-        $vimi->save();
-
-        return redirect()->route('profile.index');
+        //
     }
 
     /**
@@ -96,11 +86,5 @@ class VimiController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function targetVisi()
-    {
-        $target = Target::all();
-        return $target;
     }
 }

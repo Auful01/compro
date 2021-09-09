@@ -20,6 +20,7 @@
                         </li>
                         <li class="menu-item menu-item-has-children menu-item-30"><a href="{{route('product.index')}}">Product</a></li>
                         <li class="menu-item menu-item-has-children"><a href="{{route('profile.index')}}">Profile</a></li>
+                        <li class="menu-item menu-item-has-children"><a href="{{route('news.index')}}">news</a></li>
                         <li class="menu-item menu-item-has-children"><a href="{{url('contact')}}">Contact</a></li>
 
                         <li class="menu-item menu-item-has-children"><a href="typography.html">Shortcodes</a>
@@ -93,6 +94,7 @@
                         <li class="menu-item menu-item-home current-menu-item  gdlr-normal-menu"><a href="{{url('/beranda')}}">Home</a></li>
                         <li class="menu-item menu-item-has-children gdlr-normal-menu"><a href="{{route('product.index')}}" class="sf-with-ul-pre">Product</a></li>
                         <li class="menu-item menu-item-has-children gdlr-normal-menu"><a href="{{route('profile.index')}}" class="sf-with-ul-pre">Profile</a></li>
+                        <li class="menu-item menu-item-has-children  gdlr-normal-menu"><a href="{{route('news.index')}}">news</a></li>
                         <li class="menu-item menu-item-has-children gdlr-normal-menu"><a href="{{url('contact')}}" class="sf-with-ul-pre">Contact</a></li>
 
                         <li

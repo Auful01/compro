@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\News;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class NewsController extends Controller
 {
@@ -13,7 +15,8 @@ class NewsController extends Controller
      */
     public function index()
     {
-        //
+        $news = News::all();
+        return view('menu.news', ['news' => $news]);
     }
 
     /**
@@ -34,7 +37,20 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if ($request->file('gambar')) {
+            $img_name = $request->file('gambar')->store('gambar', 'public');
+        }
+
+        // return $request;
+        // return $request->get('berita');
+        $news = new News;
+        $news->nama = $request->get('nama');
+        $news->judul = $request->get('judul');
+        $news->gambar = $img_name;
+        $news->berita = $request->get('berita');
+        $news->save();
+
+        return redirect()->route('beranda.index');
     }
 
     /**
@@ -45,7 +61,8 @@ class NewsController extends Controller
      */
     public function show($id)
     {
-        //
+        $news = News::find($id);
+        return view('menu.detailNews', ['news' => $news]);
     }
 
     /**
@@ -68,7 +85,26 @@ class NewsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        if ($request->file('gambar')) {
+            $img_name = $request->file('gambar')->store('gambar', 'public');
+        }
+
+        // return $request;
+        // return $request->get('berita');
+        $news = News::where('idnews', $id)->first();
+        $news->nama = $request->get('nama');
+        $news->judul = $request->get('judul');
+        if ($request->file('gambar') != null) {
+            Storage::delete('public/' . $news->gambar);
+            $img_name = $request->file('gambar')->store('gambar', 'public');
+        } else {
+            $img_name = $request->gbrlama;
+        }
+        $news->gambar = $img_name;
+        $news->berita = $request->get('berita');
+        $news->save();
+
+        return redirect()->route('beranda.index');
     }
 
     /**

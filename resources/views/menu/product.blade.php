@@ -54,3 +54,59 @@
 
 {{-- </div> --}}
 @endsection
+
+
+@section('modal')
+     <!-- Modal Edit Produk-->
+  <div class="modal fade" id="editProdukModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Edit Produk</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form action="" class="url" method="POST" enctype="multipart/form-data">
+                @csrf
+                @method('PUT')
+                <input type="text" class="id" hidden>
+                <div class="form-group row mt-5">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Nama Produk</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control form-control-lg nama" name="nama" id="nama" placeholder="ID">
+                    </div>
+                </div>
+
+                <div class="form-group row mt-5">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Gambar</label>
+                    <div class="col-sm-10">
+
+                        <input type="file" class="form-control produk" name="gambar" id="gambar">
+                        <input type="hidden" class="produk" value="" name="gambarlama" id="">
+                        <img src="" class="gambar" name="gbrlama" style="height: 150px;" alt="">
+                        {{-- <div class="custom-file">
+
+                          </div> --}}
+                    </div>
+
+                </div>
+                <div class="form-group row mt-5">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label" placeholder="Nama">Deskripsi</label>
+                    <div class="col-sm-10">
+                        <textarea name="deskripsi" id="deskripsi" class="desc" cols="300" rows="10"></textarea>
+                    </div>
+                </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Save Change</button>
+        </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+@endsection

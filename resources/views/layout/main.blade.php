@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Total Business &#8211; Multi Purpose Template</title>
-
+    {{-- <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet"> --}}
     <link rel='stylesheet' href='{{asset('css/style.css')}}' type='text/css' media='all' />
     <link rel='stylesheet' href='{{asset('css/superfish.css')}}' type='text/css' media='all' />
     <link rel='stylesheet' href='{{asset('css/component.css')}}' type='text/css' media='all' />
@@ -21,6 +21,9 @@
     <link rel='stylesheet' href='{{asset('css/masterslider.main.css')}}' type='text/css' media='all' />
     <link rel='stylesheet' href='{{asset('css/masterslider-custom.css')}}' type='text/css' media='all' />
     <link rel='stylesheet' href='{{asset('css/style-custom.css')}}' type='text/css' media='all' />
+    <link rel="stylesheet" href="{{asset('css/editor.css')}}">
+    {{-- Summernote --}}
+
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
     {{-- <link rel="stylesheet" href="{{asset('css/nav.css')}}"> --}}
@@ -31,6 +34,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:300|Lato:regular|Crete+Round:regular" rel="stylesheet"
         property="stylesheet" type="text/css" media="all">
+
 
 
 </head>
@@ -45,9 +49,10 @@
         <!-- is search -->
 
         <!-- content wrapper -->
-
+         <a href="{{ url('contact')}}" style="position: fixed; bottom: 15px; right: 15px; z-index: 100; box-shadow: "><img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png"/></a>
        @include('layout.footer')
     </div>
+    @yield('modal')
     @include('layout.js')
 </body>
 

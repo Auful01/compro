@@ -563,29 +563,26 @@
                             <div class="gdlr-item-title-wrapper gdlr-item  gdlr-left gdlr-large ">
                                 <div class="gdlr-item-title-container container">
                                     <div class="gdlr-item-title-head">
-                                        <h3 class="gdlr-item-title gdlr-skin-title gdlr-skin-border">Our Vision
+                                        <h3 class="gdlr-item-title gdlr-skin-title gdlr-skin-border">Visi Perusahaan
                                         </h3>
                                     </div>
                                 </div>
                             </div>
                             <div class="gdlr-item gdlr-content-item">
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus,
-                                    porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet,
-                                    consectetur adipiscing elit. Donec id elit non mi porta gravida at eget
-                                    metus. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque
-                                    penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi leo
-                                    risus, porta ac consectetur ac, vestibulum at eros. Curabitur blandit tempus
-                                    porttitor. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae
-                                    elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem
-                                    lacinia quam venenatis vestibulum. Praesent commodo cursus magna, vel
-                                    scelerisque nisl consectetur et. Nullam id dolor id nibh ultricies vehicula
-                                    ut id elit.</p>
-                                <p>
+                                @foreach ($vimi as $v)
+                                <h3>{{$v->target->kategori}}</h3>
+                                <p>{{$v->visi}}</p>
+                                <a href="" class="btn btn-sm btn-danger"><img src="https://img.icons8.com/material-outlined/24/000000/trash--v2.png"/></a>
+                                {{-- <a href="" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#editVisiModal"  id="editVisiModal"><img src="https://img.icons8.com/material-outlined/24/000000/pencil--v3.png"/></a> --}}
+                                <a href="" class="btn btn-sm btn-warning btn-modal-editVisi "  data-toggle="modal" data-id="{{$v->id}}" data-url="{{route('vimi.store', $v->id)}}"  data-idkategori="{{$v->target->id}}" data-kategori="{{$v->target->kategori}}" data-visi="{{$v->visi}}" data-target="#editVisiModal"><img src="https://img.icons8.com/material-outlined/24/000000/pencil--v3.png"/></a>
+                                <br>
+                            @endforeach
+                                {{-- <p>
                                     <a href="upload/wood-vision-sig.png"><img
                                             class="alignnone size-full wp-image-5420"
                                             src="upload/wood-vision-sig.png" alt="wood-vision-sig" width="197"
                                             height="34" /></a>
-                                </p>
+                                </p> --}}
                                 <p><strong>Paul Heizenberg</strong>
                                     <br /> CEO of Total Factory
                                 </p>
@@ -611,6 +608,12 @@
                                             class="icon-angle-right gdlr-flex-next"></i></span>
                                 </div>
                             </div>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#inputNewsModal">
+                                Launch demo modal
+                            </button>
+
+
                         </div>
                         <div class="blog-item-wrapper">
                             <div class="blog-item-holder">
@@ -618,14 +621,14 @@
                                     <div class="flexslider" data-type="carousel"
                                         data-nav-container="blog-item-wrapper" data-columns="3">
                                         <ul class="slides">
+
+                                            @foreach ($news as $n)
                                             <li class="gdlr-item gdlr-blog-grid gdlr-skin-box">
                                                 <article id="post-2255"
                                                     class="post-2255 post type-post status-publish format-standard has-post-thumbnail hentry category-post-slider tag-blog tag-life-style">
                                                     <div class="gdlr-standard-style">
                                                         <div class="gdlr-blog-thumbnail">
-                                                            <a href="#"> <img
-                                                                    src="{{asset('gambar/img1.jpeg')}}"
-                                                                    alt="" width="400" height="300" /></a>
+                                                            <a href="#"> <img src="{{'storage/'. $n->gambar}}"alt="" width="400" height="300" /></a>
                                                         </div>
 
                                                         <div class="gdlr-blog-grid-content">
@@ -640,23 +643,18 @@
                                                                         class="blog-info blog-author gdlr-skin-info">
                                                                         <span class="gdlr-sep">/</span>By <a
                                                                             href="#" title="Posts by John Doe"
-                                                                            rel="author">John Doe</a>
+                                                                            rel="author">{{$n->nama}}</a>
                                                                     </div>
                                                                     <div class="clear"></div>
                                                                 </div>
 
-                                                                <h3 class="gdlr-blog-title"><a href="#">Sem
-                                                                        Porta Mollis Parturi</a></h3>
+                                                                <h3 class="gdlr-blog-title"><a href="#">{{$n->judul}}</a></h3>
                                                                 <div class="clear"></div>
                                                             </header>
                                                             <!-- entry-header -->
 
-                                                            <div class="gdlr-blog-content">Lorem ipsum dolor sit
-                                                                amet, consectetur adipisici elit, sed eiusmod
-                                                                tempor incidunt ut labore et dolore magna
-                                                                aliqua. Idque Caesaris facere voluntate liceret:
-                                                                sese habere....
-                                                                <div class="clear"></div><a href="#"
+                                                            <div class="gdlr-blog-content">{{Str::limit($n->berita, 200, '...')}}
+                                                                <div class="clear"></div><a href="{{route('news.show', $n->idnews )}}"
                                                                     class="excerpt-read-more">Read More</a>
                                                             </div>
                                                         </div>
@@ -664,6 +662,7 @@
                                                 </article>
                                                 <!-- #post -->
                                             </li>
+                                            @endforeach
                                             <li class="gdlr-item gdlr-blog-grid gdlr-skin-box">
                                                 <article id="post-2254"
                                                     class="post-2254 post type-post status-publish format-standard has-post-thumbnail hentry category-post-slider tag-blog tag-life-style">
@@ -1095,4 +1094,49 @@
     <!-- gdlr-content -->
     <div class="clear"></div>
 
+@endsection
+
+
+@section('modal')
+     <!-- Modal -->
+  <div class="modal fade" id="inputNewsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered  modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form action="{{ route('news.store')}}" method="POST"  enctype="multipart/form-data">
+                @csrf
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Penulis</label>
+                  <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama">
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Judul</label>
+                  <input type="text" class="form-control" name="judul" id="judul" placeholder="Judul">
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Gambar</label>
+                  <input type="file" class="form-control custom-file" name="gambar" id="gambar">
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Kolom Berita</label>
+                  <textarea class="form-control" name="berita" id="berita" rows="3"></textarea>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary btn-news">Save changes</button>
+                  </div>
+              </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
 @endsection

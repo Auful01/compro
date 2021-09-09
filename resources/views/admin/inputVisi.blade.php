@@ -16,7 +16,7 @@
                 <select class="custom-select" name="idtarget" id="idtarget">
                   <option>Choose...</option>
                   @foreach ($target as $t)
-                      <option value="{{$t->idtarget}}">{{$t->kategori}}</option>
+                      <option value="{{$t->id}}">{{$t->kategori}}</option>
                   @endforeach
                 </select>
             </div>

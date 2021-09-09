@@ -1,10 +1,15 @@
   <!-- body-wrapper -->
+
+  {{-- <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script> --}}
+  {{-- CKEDITOR --}}
+    <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+    {{-- <script src="https://cdn.jsdelivr.net/npm/bs4-summernote@0.8.10/dist/summernote-bs4.min.js"></script> --}}
     <!-- JavaScript Bundle with Popper -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    {{-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" ></script>
+    <script src="{{asset('js/editor.js')}}"></script>
     <script type='text/javascript' src='{{asset('js/jquery.js')}}'></script>
     <script type='text/javascript' src='{{asset('js/jquery-migrate.min.js')}}'></script>
     <script type='text/javascript' src='{{asset('js/scripts.js')}}'></script>
@@ -113,20 +118,6 @@
         });
     </script>
     <script type='text/javascript' src='{{asset('assets/js/masterslider.min.js')}}'></script>
-    {{-- <script>
-        window.onscroll = function() {myFunction()};
-
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
-
-        function myFunction() {
-          if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-          } else {
-            navbar.classList.remove("sticky");
-          }
-        }
-        </script> --}}
 
         <script>
             $(document).ready(function () {
@@ -146,4 +137,80 @@
 
                 })
             })
+
+            $(document).ready(function () {
+                $('.btn-modal-editVisi').on('click', function () {
+                    let id = $(this).data('id');
+                    let idkategori = $(this).data('idkategori');
+                    let url = $(this).data('url');
+                    let visi = $(this).data('visi');
+                    $('.visi').val(visi);
+                    $('.url').val(url);
+                    $.ajax({
+                        type:'GET',
+                        url:'/target-list',
+                        success:function(data, textStatus, jqXHR){
+                            let code = "";
+                            data.forEach(element => {
+                                if(element.id == idkategori){
+                                    code += `<option value="${element.id}" selected class="merek">${element.kategori}</option>`;
+                                }else{
+                                    code += `<option value="${element.id}" class="merek">${element.kategori}</option>`;
+                                }
+                            });
+                            $('.code').append(code);
+                        }
+                    })
+                })
+            })
+
+            $(document).ready(function () {
+                $('.btn-modal-editMisi').on('click', function () {
+                    let id = $(this).data('id');
+                    let misi = $(this).data('misi');
+                    $('.id').val(id);
+                    $('.misi').val(misi);
+                })
+            })
+
+            $(document).ready(function(){
+                $('.btn-news').on('click', function(){
+                    let news = $('#berita').val($('.Editor-editor').html());
+                    let nama = $(document).getElementById('nama');
+                    console.log(news.val , nama.val);
+
+                });
+            });
+
+            $(document).ready(function(){
+                $('.btn-modal-editNews').on('click', function () {
+                    let id = $(this).data('id')
+                    let judul = $(this).data('judul')
+                    let nama = $(this).data('nama')
+                    let berita = $(this).data('berita')
+                    let gambar = $(this).data('gambar')
+                    let gbrlama = $(this).data('path')
+                    let url = $(this).data('url')
+                    $('.judul').val(judul)
+                    $('.nama').val(nama)
+                    $('.Editor-editor').html(berita)
+                    $('.gambar').attr('src', gambar)
+                    $('.gbrlama').val(gbrlama)
+                    $('.url').attr('action', url)
+                })
+            })
+
+
+            $(function () {
+                    $('[data-toggle="tooltip"]').tooltip()
+            })
         </script>
+
+<script>
+    $(document).ready(function() {
+        $("#berita").Editor();
+
+    });
+
+
+</script>

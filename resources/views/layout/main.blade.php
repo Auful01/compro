@@ -2,12 +2,13 @@
 <!--[if IE 7]><html class="ie ie7 ltie8 ltie9" lang="en-US"><![endif]-->
 <!--[if IE 8]><html class="ie ie8 ltie9" lang="en-US"><![endif]-->
 <!--[if !(IE 7) | !(IE 8)  ]><!-->
-<html lang="en-US">
+{{-- <html lang="en-US"> --}}
 <!--<![endif]-->
-
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Total Business &#8211; Multi Purpose Template</title>
     {{-- <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet"> --}}

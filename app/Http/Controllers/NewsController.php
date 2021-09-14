@@ -89,8 +89,6 @@ class NewsController extends Controller
             $img_name = $request->file('gambar')->store('gambar', 'public');
         }
 
-        // return $request;
-        // return $request->get('berita');
         $news = News::where('idnews', $id)->first();
         $news->nama = $request->get('nama');
         $news->judul = $request->get('judul');

@@ -12,21 +12,21 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="{{asset('upload/rokok31.jpg')}}" class="d-block w-70" style="max-height: 80%;" alt="...">
+                <img src="{{asset('gambar/carousel1.png')}}" class="d-block w-100" style="max-height: 100%;" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                   <h5>First slide label</h5>
                   <p>Some representative placeholder content for the first slide.</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="{{asset('upload/rokok4.png')}}" class="d-block w-100" style="max-height: 80%;" alt="...">
+                <img src="{{asset('gambar/carousel2.png')}}" class="d-block w-100" style="max-height: 100%;" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                   <h5>Second slide label</h5>
                   <p>Some representative placeholder content for the second slide.</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="{{asset('upload/rokok31.jpg')}}" class="d-block w-100" style="maxheight: 80%;" alt="...">
+                <img src="{{asset('gambar/carousel3.png')}}" class="d-block w-100" style="maxheight: 100%;" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                   <h5>Third slide label</h5>
                   <p>Some representative placeholder content for the third slide.</p>
@@ -127,7 +127,7 @@
 
         <!-- Sidebar With Content Section-->
         <div class="with-sidebar-wrapper">
-            <section id="content-section-2">
+            {{-- <section id="content-section-2">
                 <div class="gdlr-full-size-wrapper gdlr-show-all gdlr-skin-service-half"
                     style="padding-bottom: 0px;  background-color: #ffffff; ">
                     <div class="gdlr-service-half-background-item" style="margin-bottom: 0px;">
@@ -170,7 +170,7 @@
                     <div class="clear"></div>
                 </div>
                 <div class="clear"></div>
-            </section>
+            </section> --}}
             <section id="content-section-3">
                 <div class="gdlr-color-wrapper  gdlr-show-all gdlr-skin-stunning-text-small"
                     style="background-color: #36bddb; padding-top: 55px; padding-bottom: 34px; ">
@@ -191,7 +191,7 @@
             <section id="content-section-4">
                 <div class="gdlr-color-wrapper  gdlr-show-all no-skin"
                     style="background-color: #ffffff; padding-top: 70px; padding-bottom: 20px; ">
-                    <div class="container">
+                    {{-- <div class="container">
                         <div class="four columns">
                             <div class="gdlr-ux column-service-ux">
                                 <div class="gdlr-item gdlr-column-service-item gdlr-type-1">
@@ -290,8 +290,61 @@
                             </div>
                         </div>
                         <div class="clear"></div>
+                    </div> --}}
+                    <h1 align="center" class="mb-4">Produk Kami</h1>
+                    <div class="flexslider" data-type="carousel"
+                                            data-nav-container="gdlr-testimonial-item" data-columns="1">
+                                            <ul class="slides">
+                                                @foreach ($product as $p)
+
+                                                <li class="testimonial-item">
+                                                    <div class="row align-items-center">
+                                                        <div class="col-md-4 mb-2  d-flex justify-content-center">
+                                                            <img src="{{'storage/'.$p->gambar}}" id="gambar" style="max-width: 300px">
+                                                        </div>
+                                                          <div class="col-md-7 mr-1 desc align-middle">
+                                                                  <h1>{{$p->nama_produk}}</h1><br>
+                                                                    <p class="text-justify" >{{$p->deskripsi}}</p> <br>
+
+                                                                    @auth
+                                                                    <form action="{{ route('product.destroy',$p->id) }}" method="POST">
+                                                                        @csrf
+                                                                        @method('DELETE')
+                                                                    <a href="" class="btn btn-sm btn-warning btn-modal-editProduk " data-toggle="tooltip" data-placement="top" title="Edit"  data-toggle="modal"  data-target="#editProdukModal" data-id="{{$p->id}}" data-nama="{{$p->nama_produk}}" data-gambar="{{'storage/'.$p->gambar}}" data-desc="{{$p->deskripsi}} " data-url="{{route('product.update', $p->id)}}" data-path="{{$p->gambar}}"><img src="https://img.icons8.com/material-outlined/24/000000/pencil--v3.png"/></a>
+                                                                    <button type="submit" class="btn btn-sm  btn-danger"  data-toggle="tooltip" data-placement="top" title="Hapus" onclick="return confirm('apakah anda ingin Menghapus produk ini?')"><img src="https://img.icons8.com/material-outlined/24/000000/trash--v2.png"/></button>
+                                                                </form>
+                                                                    @endauth
+
+                                                          </div>
+                                                    </div>
+
+                                                </li>
+                                                @endforeach
+
+                                            </ul>
                     </div>
-                </div>
+                    {{-- @foreach ($product as $p)
+                    <div class="col-md-6 mb-2  d-flex justify-content-center">
+                      <img src="{{'storage/'.$p->gambar}}" id="gambar" style="max-width: 300px">
+                    </div>
+                    <div class="col-md-6  ">
+                        <div class="desc align-middle" style="top:50%">
+                            <h1>{{$p->nama_produk}}</h1><br>
+                              <p class="text-justify" >{{$p->deskripsi}}</p> <br>
+
+                              @auth
+                              <form action="{{ route('product.destroy',$p->id) }}" method="POST">
+                                  @csrf
+                                  @method('DELETE')
+                              <a href="" class="btn btn-sm btn-warning btn-modal-editProduk "  data-toggle="modal"  data-target="#editProdukModal" data-id="{{$p->id}}" data-nama="{{$p->nama_produk}}" data-gambar="{{'storage/'.$p->gambar}}" data-desc="{{$p->deskripsi}} " data-url="{{route('product.update', $p->id)}}" data-path="{{$p->gambar}}"><img src="https://img.icons8.com/material-outlined/24/000000/pencil--v3.png"/></a>
+                              <button type="submit" class="btn btn-sm  btn-danger" onclick="return confirm('apakah anda ingin Menghapus produk ini?')"><img src="https://img.icons8.com/material-outlined/24/000000/trash--v2.png"/></button>
+                          </form>
+                              @endauth
+
+                        </div>
+                    </div>
+                    @endforeach
+                </div> --}}
                 <div class="clear"></div>
             </section>
             {{-- <section id="content-section-5">
@@ -322,7 +375,7 @@
                         <div class="gdlr-item-title-container container">
                             <div class="gdlr-item-title-head">
                                 <h3 class="gdlr-item-title gdlr-skin-title gdlr-skin-border">Kerja Kami</h3>
-                                <a class="gdlr-item-title-link " href="#">Lihat Galeri Kerja</a>
+                                {{-- <a class="gdlr-item-title-link " href="#">Lihat Galeri Kerja</a> --}}
                             </div>
                         </div>
                     </div>
@@ -454,7 +507,15 @@
                 <div class="gdlr-color-wrapper  gdlr-show-all no-skin"
                     style="background-color: #ffffff; padding-top: 75px; padding-bottom: 50px; ">
                     <div class="container">
-                        <div class="six columns">
+                        <div class="container">
+                            <h1 align="center" class="mb-5">Sejarah Singkat</h1>
+
+                            <p style="text-align: justify">
+                                Perusahaan ini merupakan perusahaan produksi Rokok. Nama Perusahaan ini adalah <b>PT Sehat Selalu Banyak Rejeki</b>, berada di Dusun Boro Ureg-ureg RT 06 RW 06, Desa Astrikaton, Kecamatan Pakis, Kabupaten Malang.
+                                Didirikan pada tahun 2020 oleh <b>Mochammad Abdul Wahab</b>. Pekerja dari perusahaan ini sejumlah 30 orang.
+                            </p>
+                        </div>
+                        {{-- <div class="six columns">
                             <div class="gdlr-item gdlr-about-us-item gdlr-plain">
                                 <div class="about-us-title-wrapper">
                                     <h3 class="about-us-title">About Us</h3>
@@ -510,13 +571,13 @@
                                         style="background-color: #36bddb;"></div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="clear"></div>
                     </div>
                 </div>
                 <div class="clear"></div>
             </section>
-            <section id="content-section-8">
+            {{-- <section id="content-section-8">
                 <div class="gdlr-parallax-wrapper gdlr-background-image gdlr-show-all no-skin"
                     id="gdlr-parallax-wrapper-2" data-bgspeed="0.1"
                     style="background-image: url('{{asset('upload/rokok1.jpg')}}'); padding-top: 100px; padding-bottom: 70px; ">
@@ -553,7 +614,7 @@
                     </div>
                 </div>
                 <div class="clear"></div>
-            </section>
+            </section> --}}
             <section id="content-section-9">
                 <div class="gdlr-parallax-wrapper gdlr-background-image gdlr-show-all gdlr-skin-dark-skin"
                     id="gdlr-parallax-wrapper-3" data-bgspeed="0"
@@ -572,10 +633,16 @@
                                 @foreach ($vimi as $v)
                                 <h3>{{$v->target->kategori}}</h3>
                                 <p>{{$v->visi}}</p>
-                                <a href="" class="btn btn-sm btn-danger"><img src="https://img.icons8.com/material-outlined/24/000000/trash--v2.png"/></a>
-                                {{-- <a href="" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#editVisiModal"  id="editVisiModal"><img src="https://img.icons8.com/material-outlined/24/000000/pencil--v3.png"/></a> --}}
-                                <a href="" class="btn btn-sm btn-warning btn-modal-editVisi "  data-toggle="modal" data-id="{{$v->id}}" data-url="{{route('vimi.store', $v->id)}}"  data-idkategori="{{$v->target->id}}" data-kategori="{{$v->target->kategori}}" data-visi="{{$v->visi}}" data-target="#editVisiModal"><img src="https://img.icons8.com/material-outlined/24/000000/pencil--v3.png"/></a>
+                                @auth
+                                <form action="{{route('vimi.destroy',$v->id)}}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                <button type="submit" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="top" title="Hapus" onclick="return confirm('Apakah anda yakin ingin menghapus ini?')"><img src="https://img.icons8.com/material-outlined/24/000000/trash--v2.png"/></button>
+                                <a href="" class="btn btn-sm btn-warning btn-modal-editVisi" data-toggle="tooltip" data-placement="top" title="Edit"  data-toggle="modal" data-id="{{$v->id}}" data-url="{{route('vimi.update', $v->id)}}"  data-idkategori="{{$v->target->id}}" data-kategori="{{$v->target->kategori}}" data-visi="{{$v->visi}}" data-target="#editVisiModal"><img src="https://img.icons8.com/material-outlined/24/000000/pencil--v3.png"/></a>
+                                </form>
                                 <br>
+                                @endauth
+
                             @endforeach
                                 {{-- <p>
                                     <a href="upload/wood-vision-sig.png"><img
@@ -603,15 +670,18 @@
                             <div class="gdlr-item-title-container container">
                                 <div class="gdlr-item-title-head">
                                     <h3 class="gdlr-item-title gdlr-skin-title gdlr-skin-border">Recent News
-                                    </h3><a class="gdlr-item-title-link" href="#">Read All News</a><span
+                                    </h3><a class="gdlr-item-title-link" href="{{route('news.index')}}">Read All News</a><span
                                         class="gdlr-nav-title"><i class="icon-angle-left gdlr-flex-prev"></i><i
                                             class="icon-angle-right gdlr-flex-next"></i></span>
                                 </div>
                             </div>
                             <!-- Button trigger modal -->
+                            @auth
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#inputNewsModal">
-                                Launch demo modal
+                                Tambah Berita
                             </button>
+                            @endauth
+
 
 
                         </div>
@@ -637,7 +707,7 @@
                                                                     <div
                                                                         class="blog-info blog-date gdlr-skin-info">
                                                                         <span class="gdlr-sep">/</span><a
-                                                                            href="#">21 Mar 2014</a>
+                                                                            href="#">{{$n->created_at->format('d F Y')}}</a>
                                                                     </div>
                                                                     <div
                                                                         class="blog-info blog-author gdlr-skin-info">
@@ -653,7 +723,7 @@
                                                             </header>
                                                             <!-- entry-header -->
 
-                                                            <div class="gdlr-blog-content">{{Str::limit($n->berita, 200, '...')}}
+                                                            <div class="gdlr-blog-content">{!!Str::limit($n->berita, 200, '...')!!}
                                                                 <div class="clear"></div><a href="{{route('news.show', $n->idnews )}}"
                                                                     class="excerpt-read-more">Read More</a>
                                                             </div>
@@ -663,7 +733,7 @@
                                                 <!-- #post -->
                                             </li>
                                             @endforeach
-                                            <li class="gdlr-item gdlr-blog-grid gdlr-skin-box">
+                                            {{-- <li class="gdlr-item gdlr-blog-grid gdlr-skin-box">
                                                 <article id="post-2254"
                                                     class="post-2254 post type-post status-publish format-standard has-post-thumbnail hentry category-post-slider tag-blog tag-life-style">
                                                     <div class="gdlr-standard-style">
@@ -892,7 +962,7 @@
                                                     </div>
                                                 </article>
                                                 <!-- #post -->
-                                            </li>
+                                            </li> --}}
                                         </ul>
                                         <div class="clear"></div>
                                     </div>
@@ -917,55 +987,36 @@
                                         <div class="gdlr-item-title-head">
                                             <h3 class="gdlr-item-title gdlr-skin-title gdlr-skin-border">
                                                 Testimonial</h3>
+
                                         </div>
                                     </div>
                                 </div>
+
+
                                 <div class="gdlr-item gdlr-testimonial-item carousel large plain-style">
                                     <div class="gdlr-ux gdlr-testimonial-ux">
                                         <div class="flexslider" data-type="carousel"
                                             data-nav-container="gdlr-testimonial-item" data-columns="1">
                                             <ul class="slides">
+                                             @foreach ($test as $t)
                                                 <li class="testimonial-item">
                                                     <div class="testimonial-content gdlr-skin-content">
-                                                        <p>Etiam porta sem malesuada magna mollis euismod.
-                                                            Maecenas faucibus mollis interdum. Donec ullamcorper
-                                                            nulla non metus auctor fringilla. Nullam id dolor id
-                                                            nibh ultricies vehicula ut id elit. Lorem ipsum
-                                                            dolor sit amet, consectetur.</p>
+                                                        <p>{{$t->testi}}</p>
                                                     </div>
                                                     <div class="testimonial-info"><span
-                                                            class="testimonial-author gdlr-skin-link-color">John
-                                                            Smoth<span>, </span></span><span
-                                                            class="testimonial-position gdlr-skin-info">Furniture
-                                                            Fact</span></div>
+                                                            class="testimonial-author gdlr-skin-link-color">{{$t->nama}}<span>, </span></span><span
+                                                            class="testimonial-position gdlr-skin-info">{{$t->kategori}}</span></div>
+                                                            @auth
+                                                            <form action="{{route('testi.destroy', $t->id)}}" method="POST" >
+                                                                @csrf
+                                                                @method('DELETE')
+                                                                <button type="submit" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="top" title="Hapus" onclick="return confirm('Apakah anda yakin ingin Menghapus ini?')"><img src="https://img.icons8.com/material-outlined/24/000000/trash--v2.png"/></button>
+                                                                <a href="" class="btn btn-sm btn-warning btn-modal-editTesti" data-toggle="tooltip" data-placement="top" title="Edit"  data-toggle="modal" data-id="{{$t->id}}" data-url="{{route('testi.update', $t->id)}}"  data-kategori="{{$t->kategori}}" data-testi="{{$t->testi}}" data-nama="{{$t->nama}}" data-target="#editTestiModal"><img src="https://img.icons8.com/material-outlined/24/000000/pencil--v3.png"/></a>
+                                                            </form>
+                                                            @endauth
                                                 </li>
-                                                <li class="testimonial-item">
-                                                    <div class="testimonial-content gdlr-skin-content">
-                                                        <p>Nulla vitae elit libero, a pharetra augue. Vivamus
-                                                            sagittis lacus vel augue laoreet rutrum faucibus
-                                                            dolor auctor. Donec id elit non mi porta gravida at
-                                                            eget metus. Maecenas faucibus mollis interdum.</p>
-                                                    </div>
-                                                    <div class="testimonial-info"><span
-                                                            class="testimonial-author gdlr-skin-link-color">Paul
-                                                            Johnson<span>, </span></span><span
-                                                            class="testimonial-position gdlr-skin-info">Apple</span>
-                                                    </div>
-                                                </li>
-                                                <li class="testimonial-item">
-                                                    <div class="testimonial-content gdlr-skin-content">
-                                                        <p>Fusce dapibus, tellus ac cursus commodo, tortor
-                                                            mauris condimentum nibh, ut fermentum massa justo
-                                                            sit amet risus. Nullam quis risus eget urna mollis
-                                                            ornare vel eu leo. Aenean lacinia bibendum nulla sed
-                                                            consectetur.</p>
-                                                    </div>
-                                                    <div class="testimonial-info"><span
-                                                            class="testimonial-author gdlr-skin-link-color">Alan
-                                                            Smith<span>, </span></span><span
-                                                            class="testimonial-position gdlr-skin-info">Wooden
-                                                            Corp.</span></div>
-                                                </li>
+                                             @endforeach
+
                                             </ul>
                                         </div>
                                     </div>
@@ -976,6 +1027,13 @@
                             </div>
                         </div>
                         <div class="clear"></div>
+                        @auth
+                        <div class="d-flex  justify-content-center">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#inputTestiModal">
+                                Tambah Testi
+                            </button>
+                        </div>
+                        @endauth
                     </div>
                 </div>
                 <div class="clear"></div>
@@ -990,15 +1048,18 @@
                                     data-effect="fade" data-columns="5" data-type="carousel"
                                     data-nav-container="gdlr-banner-images">
                                     <ul class="slides">
-                                        <li><img src="upload/banner-1.png" alt="" width="147" height="58" />
+                                        <li><img src="{{asset('gambar/mrx.png')}}" alt="" style="max-width: 120px" />
                                         </li>
-                                        <li><img src="upload/banner-2.png" alt="" width="151" height="59" />
+                                        <li><img src="{{asset('gambar/cahayapro.png')}}" alt="" style="max-width: 120px" />
                                         </li>
-                                        <li><img src="upload/banner-3.png" alt="" width="184" height="58" />
+                                        <li><img src="https://img.icons8.com/color/60/000000/bootstrap.png"/>
                                         </li>
-                                        <li><img src="upload/banner-4.png" alt="" width="128" height="59" />
+                                        <li><img src="https://img.icons8.com/fluency/60/000000/laravel.png"/>
                                         </li>
-                                        <li><img src="upload/banner-5.png" alt="" width="128" height="59" />
+                                        <li><img src="https://img.icons8.com/fluency/60/000000/stackoverflow.png"/>
+                                        </li>
+                                        <li>
+                                            <img src="https://img.icons8.com/color/60/000000/javascript.png"/>
                                         </li>
                                     </ul>
                                 </div>
@@ -1010,7 +1071,7 @@
                 </div>
                 <div class="clear"></div>
             </section>
-            <section id="content-section-13">
+            {{-- <section id="content-section-13">
                 <div class="gdlr-color-wrapper  gdlr-show-all gdlr-skin-service-half"
                     style="background-color: #313131; padding-top: 75px; padding-bottom: 52px; ">
                     <div class="container">
@@ -1086,7 +1147,7 @@
                     </div>
                 </div>
                 <div class="clear"></div>
-            </section>
+            </section> --}}
         </div>
         <!-- Below Sidebar Section-->
 
@@ -1139,4 +1200,175 @@
       </div>
     </div>
   </div>
+
+
+  <div class="modal fade" id="inputTestiModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered  modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form action="{{ route('testi.store')}}" method="POST" >
+                @csrf
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Nama</label>
+                  <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama" required>
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Kategori</label>
+                  <input type="text" class="form-control" name="kategori" id="kategori" placeholder="Kategori" required>
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Testimoni</label>
+                  <textarea class="form-control" name="testi" id="testi" rows="3" placeholder="Testi" required></textarea>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary btn-news">Save changes</button>
+                  </div>
+              </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="editTestiModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered  modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form action="" class="url" method="POST" >
+                @csrf
+                @method('PUT')
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Nama</label>
+                  <input type="text" class="form-control nama" name="nama" id="nama" placeholder="Nama" required>
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Kategori</label>
+                  <input type="text" class="form-control kategori" name="kategori" id="kategori" placeholder="Kategori" required>
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Testimoni</label>
+                  <textarea class="form-control testi" name="testi" id="testi" rows="3" placeholder="Testi" required></textarea>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary btn-news">Save changes</button>
+                  </div>
+              </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  {{-- Edit Produk Modal --}}
+  <div class="modal fade" id="editProdukModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Edit Produk</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form action="" class="url" method="POST" enctype="multipart/form-data">
+                @csrf
+                @method('PUT')
+                <input type="text" class="id" hidden>
+                <div class="form-group row mt-5">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Nama Produk</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control form-control-lg nama" name="nama" id="nama" placeholder="ID">
+                    </div>
+                </div>
+
+                <div class="form-group row mt-5">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Gambar</label>
+                    <div class="col-sm-10">
+
+                        <input type="file" class="form-control produk" name="gambar" id="gambar">
+                        <input type="hidden" class="produk" value="" name="gambarlama" id="">
+                        <img src="" class="gambar" name="gbrlama" style="height: 150px;" alt="">
+                        {{-- <div class="custom-file">
+
+                          </div> --}}
+                    </div>
+
+                </div>
+                <div class="form-group row mt-5">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label" placeholder="Nama">Deskripsi</label>
+                    <div class="col-sm-10">
+                        <textarea name="deskripsi" id="deskripsi" class="desc" cols="300" rows="10"></textarea>
+                    </div>
+                </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Save Change</button>
+        </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+{{-- Edit Visi Modal --}}
+  <div class="modal fade" id="editVisiModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Edit Visi</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <h1>Edit Visi</h1>
+            <form action="" class="url" method="POST" >
+                @csrf
+                @method('PUT')
+                <div class="form-group row mt-5">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Target</label>
+                    <div class="col-sm-10">
+                        <select class="custom-select code" name="idtarget" id="idtarget">
+
+                          </select>
+                    </div>
+                </div>
+                <div class="form-group row mt-5">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Visi</label>
+                    <div class="col-sm-10">
+                        {{-- <input type="text" class="form-control form-control-lg" name="kategori" id="kategori" placeholder="Target"> --}}
+                        <textarea name="visi"  id="visi" class="form-control visi" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group mt-5" style="text-align: right;">
+                    <!-- <div class="col-sm-10"> -->
+                    <button type="submit" class="btn btn-primary" name="simpan">Tambah</button>
+                    <a href="{{route('product.index')}}" class="btn btn-danger">Kembali</a>
+                    <!-- </div> -->
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+</div>
 @endsection

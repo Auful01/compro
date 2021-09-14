@@ -145,7 +145,7 @@
                     let url = $(this).data('url');
                     let visi = $(this).data('visi');
                     $('.visi').val(visi);
-                    $('.url').val(url);
+                    $('.url').attr('action',url);
                     $.ajax({
                         type:'GET',
                         url:'/target-list',
@@ -153,7 +153,7 @@
                             let code = "";
                             data.forEach(element => {
                                 if(element.id == idkategori){
-                                    code += `<option value="${element.id}" selected class="merek">${element.kategori}</option>`;
+                                    code += `<option value="${element.id}" selected class="merek">${element.kategori} </option>`;
                                 }else{
                                     code += `<option value="${element.id}" class="merek">${element.kategori}</option>`;
                                 }
@@ -165,9 +165,24 @@
             })
 
             $(document).ready(function () {
+                $('.btn-modal-editTesti').on('click', function () {
+                    let id = $(this).data('id');
+                    let nama = $(this).data('nama');
+                    let kategori = $(this).data('kategori');
+                    let url = $(this).data('url');
+                    let testi = $(this).data('testi');
+                    $('.nama').val(nama);
+                    $('.kategori').val(kategori);
+                    $('.testi').val(testi);
+                    $('.url').attr('action',url);
+                })
+            })
+            $(document).ready(function () {
                 $('.btn-modal-editMisi').on('click', function () {
                     let id = $(this).data('id');
                     let misi = $(this).data('misi');
+                    let url = $(this).data('url');
+                    $('.url').attr('action', url);
                     $('.id').val(id);
                     $('.misi').val(misi);
                 })

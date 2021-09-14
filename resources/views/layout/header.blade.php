@@ -22,8 +22,26 @@
                         <li class="menu-item menu-item-has-children"><a href="{{route('profile.index')}}">Profile</a></li>
                         <li class="menu-item menu-item-has-children"><a href="{{route('news.index')}}">news</a></li>
                         <li class="menu-item menu-item-has-children"><a href="{{url('contact')}}">Contact</a></li>
+                        @auth
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }}
+                            </a>
 
-                        <li class="menu-item menu-item-has-children"><a href="typography.html">Shortcodes</a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+
+                            </div>
+                        </li>
+                        @endauth
+                        {{-- <li class="menu-item menu-item-has-children"><a href="typography.html">Shortcodes</a>
                             <ul class="dl-submenu">
                                 <li id="menu-item-10" class="menu-item menu-item-has-children menu-item-10"><a
                                         href="#">Shortcode Set 1</a>
@@ -82,7 +100,7 @@
                                     </ul>
                                 </li>
                             </ul>
-                        </li>
+                        </li> --}}
                     </ul>
                 </div>
             </div>
@@ -96,10 +114,30 @@
                         <li class="menu-item menu-item-has-children gdlr-normal-menu"><a href="{{route('profile.index')}}" class="sf-with-ul-pre">Profile</a></li>
                         <li class="menu-item menu-item-has-children  gdlr-normal-menu"><a href="{{route('news.index')}}">news</a></li>
                         <li class="menu-item menu-item-has-children gdlr-normal-menu"><a href="{{url('contact')}}" class="sf-with-ul-pre">Contact</a></li>
+                        {{-- <li>{{ Auth::user()->name }}</li> --}}
+                        @auth
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }}
+                            </a>
 
-                        <li
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+
+                            </div>
+                        </li>
+                        @endauth
+
+                        {{-- <li
                             class="menu-item menu-item-has-childrenmenu-item menu-item-has-children gdlr-mega-menu">
-                            <a href="typography.html" class="sf-with-ul-pre">Shortcodes</a>
+                            <a href="typography.html" class="sf-with-ul-pre">{{ Auth::user()->name }}<</a>
                             <div class="sf-mega">
                                 <ul class="sub-menu">
                                     <li class="menu-item menu-item-has-children menu-item-10"
@@ -168,20 +206,8 @@
                                     </li>
                                 </ul>
                             </div>
-                        </li>
-                    </ul><img id="gdlr-menu-search-button" src="images/magnifier-dark.png" alt="" width="58"
-                        height="59" />
-                    <div class="gdlr-menu-search" id="gdlr-menu-search">
-                        <form method="get" id="searchform" action="#">
-                            <div class="search-text">
-                                <input type="text" value="Type Keywords" name="s" autocomplete="off"
-                                    data-default="Type Keywords" />
-                            </div>
-                            <input type="submit" value="" />
-                            <div class="clear"></div>
-                        </form>
-                    </div>
-                </nav>
+                        </li> --}}
+                    </ul>
                 <div class="clear"></div>
             </div>
             <div class="clear"></div>

@@ -75,7 +75,17 @@ class MisiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $count = Misi::all()->count();
+        if ($count > 1) {
+            $misi = Misi::where('id', $id);
+        } else {
+            $misi = Misi::where('id', $id)->first();
+        }
+
+        $misi->misi = $request->get('misi');
+        $misi->save();
+
+        return redirect()->route('profile.index');
     }
 
     /**
@@ -86,6 +96,7 @@ class MisiController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Misi::where('id', $id)->delete();
+        return redirect()->route('beranda.index');
     }
 }

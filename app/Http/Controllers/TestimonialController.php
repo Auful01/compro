@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Target;
+use App\Models\Testimonial;
 use Illuminate\Http\Request;
 
-class TargetController extends Controller
+class TestimonialController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,7 @@ class TargetController extends Controller
      */
     public function index()
     {
-        $target = Target::all();
-        return view('admin.inputVisi', ['target' => $target]);
+        //
     }
 
     /**
@@ -25,8 +24,7 @@ class TargetController extends Controller
      */
     public function create()
     {
-        $target = Target::all();
-        return view('admin.inputVisi', ['target' => $target]);
+        //
     }
 
     /**
@@ -37,16 +35,13 @@ class TargetController extends Controller
      */
     public function store(Request $request)
     {
-        // $request->validate([
-        //     'kategori' => 'required'
+        $test = new Testimonial();
+        $test->nama = $request->get('nama');
+        $test->kategori = $request->get('kategori');
+        $test->testi = $request->get('testi');
+        $test->save();
 
-        // ]);
-
-        $target = new Target;
-        $target->kategori = $request->get('kategori');
-        $target->save();
-        // dd($target);
-        return redirect()->route('vimi.create');
+        return redirect()->route('beranda.index');
     }
 
     /**
@@ -80,7 +75,13 @@ class TargetController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $test = Testimonial::where('id', $id)->first();
+        $test->nama = $request->get('nama');
+        $test->kategori = $request->get('kategori');
+        $test->testi = $request->get('testi');
+        $test->save();
+
+        return redirect()->route('beranda.index');
     }
 
     /**
@@ -91,7 +92,7 @@ class TargetController extends Controller
      */
     public function destroy($id)
     {
-        Target::where('id', $id)->delete();
-        return redirect()->route('profile.index');
+        Testimonial::where('id', $id)->delete();
+        return redirect()->route('beranda.index');
     }
 }

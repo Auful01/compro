@@ -79,7 +79,9 @@ class VimiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $vimi = Vimi::with('target')->where('id', $id);
+        // return $request;
+        $count = Vimi::all()->count();
+        $vimi = Vimi::with('target')->where('id', $id)->first();
         $vimi->visi = $request->get('visi');
         $vimi->idtarget = $request->get('idtarget');
         $vimi->save();
@@ -95,7 +97,8 @@ class VimiController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Vimi::where('id', $id)->delete();
+        return redirect()->route('beranda.index');
     }
 
     public function targetVisi()

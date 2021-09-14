@@ -42,16 +42,25 @@
                                     <ul style="left: 0;margin-left: -5px">
                                         @foreach ($misi as $m)
                                             <li>{{$m->misi}}</li>
-                                            <a href="#" class="btn btn-sm btn-danger" ><img src="https://img.icons8.com/material-outlined/24/000000/trash--v2.png"/></a>
-                                            <a href="" class="btn btn-sm btn-warning btn-modal-editMisi" data-id="{{$m->id}}"  data-misi="{{$m->misi}}" data-toggle="modal" data-target="#editMisiModal"><img src="https://img.icons8.com/material-outlined/24/000000/pencil--v3.png"/></a>
+                                            @auth
+                                            <form action="{{route('misi.destroy', $m->id)}}" method="POST">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus ini?')"><img src="https://img.icons8.com/material-outlined/24/000000/trash--v2.png"></button>
+                                                <a href="" class="btn btn-sm btn-warning btn-modal-editMisi" data-id="{{$m->id}}"  data-misi="{{$m->misi}}" data-url="{{route('misi.update', $m->id)}}" data-toggle="modal" data-target="#editMisiModal"><img src="https://img.icons8.com/material-outlined/24/000000/pencil--v3.png"/></a>
+                                            </form>
+                                            @endauth
                                         @endforeach
                                     </ul>
 
                                 </div>
                             </div>
+                            @auth
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tambahMisiModal">
                                 Tambah Visi
                               </button>
+                            @endauth
+
                             <div class="clear"></div>
                         </div>
                     </div>
@@ -66,14 +75,24 @@
                                     @foreach ($vimi as $v)
                                         <h3>{{$v->target->kategori}}</h3>
                                         <p>{{$v->visi}}</p>
-                                        <a href="" class="btn btn-sm btn-danger"><img src="https://img.icons8.com/material-outlined/24/000000/trash--v2.png"/></a>
+                                        @auth
+                                        <form action="{{route('vimi.destroy',$v->id)}}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                        <button href="" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus ini?')"><img src="https://img.icons8.com/material-outlined/24/000000/trash--v2.png"></button>
                                         {{-- <a href="" class="btn btn-sm btn-warning" data-toggle="modal" data-target="#editVisiModal"  id="editVisiModal"><img src="https://img.icons8.com/material-outlined/24/000000/pencil--v3.png"/></a> --}}
-                                        <a href="" class="btn btn-sm btn-warning btn-modal-editVisi "  data-toggle="modal" data-id="{{$v->id}}" data-url="{{route('vimi.store', $v->id)}}"  data-idkategori="{{$v->target->id}}" data-kategori="{{$v->target->kategori}}" data-visi="{{$v->visi}}" data-target="#editVisiModal"><img src="https://img.icons8.com/material-outlined/24/000000/pencil--v3.png"/></a>
+                                        <a href="" class="btn btn-sm btn-warning btn-modal-editVisi "  data-toggle="modal" data-id="{{$v->id}}" data-url="{{route('vimi.update', $v->id)}}"  data-idkategori="{{$v->target->id}}" data-kategori="{{$v->target->kategori}}" data-visi="{{$v->visi}}" data-target="#editVisiModal"><img src="https://img.icons8.com/material-outlined/24/000000/pencil--v3.png"/></a>
+                                    </form>
+                                        @endauth
+
                                         <br>
                                     @endforeach
                                 </div>
                             </div>
+                            @auth
                             <a href="{{route('vimi.create')}}" class="btn btn-primary">Tambah Visi</a>
+
+                            @endauth
 
                             {{-- <a href="{{route('vimi.create')}}" class="btn btn-primary">Tambah Misi</a> --}}
                             <div class="clear"></div>
@@ -85,105 +104,36 @@
             <div class="clear"></div>
         </section>
         <section id="content-section-3">
-            <div class="gdlr-parallax-wrapper gdlr-background-image gdlr-show-all gdlr-skin-dark-skin" id="gdlr-parallax-wrapper-2" data-bgspeed="0" style="background-image: url('{{asset('upload/rokok3.jpg')}}'); padding-top: 135px; padding-bottom: 105px; ">
-                <div class="container">
-                    <div class="gdlr-stunning-item-ux gdlr-ux">
-                        <div class="gdlr-item gdlr-stunning-item gdlr-button-on gdlr-stunning-center">
-                            <h2 class="stunning-item-title">It’s The Best WordPress Theme.</h2>
-                            <div class="stunning-item-caption gdlr-skin-content">
-                                <p>This theme comes with many awesome features and it suits to any kind of businesses. You will love it!</p>
-                            </div><a class="stunning-item-button gdlr-button  " href="#" target="_blank">Learn More</a><a class="stunning-item-button gdlr-button" href="#" target="_blank">Buy Now!</a></div>
-                    </div>
-                    <div class="clear"></div>
-                    <div class="clear"></div>
-                </div>
+            <div class="container-fluid row p-0 m-0 " >
+                <a href="{{url('/contact')}}" class="col-md-4 d-flex px-0 justify-content-center align-items-center bg-success" style="padding-top: 100px; padding-bottom: 100px">
+                        {{-- <img src="{{asset('gambar/img1.jpeg')}}"  alt=""> --}}
+                        <img src="https://img.icons8.com/color/300/000000/whatsapp--v1.png" style="height: 200px; width: 200px"/>
+                 </a>
+                <a href="mailto:cahaya.pro213@gmail.com" class="col-md-4 d-flex pz-0 justify-content-center align-items-center bg-light" style="padding-top: 100px; padding-bottom: 100px" >
+                    {{-- <img src="{{asset('gambar/img1.jpeg')}}"  alt=""> --}}
+                    <img src="https://img.icons8.com/color/300/000000/gmail-new.png" style="height: 200px; width: 200px"/>
+                </a>
+                <a href="https://web.facebook.com/profile.php?id=100072536925490" class="col-md-4 d-flex px-0 justify-content-center align-items-center bg-primary" style="padding-top: 100px; padding-bottom: 100px" >
+                    {{-- <img src="{{asset('gambar/img1.jpeg')}}"  alt=""> --}}
+                    <img src="https://img.icons8.com/color/300/000000/facebook--v1.png" style="height: 200px; width: 200px"/>
+                </a>
+
+
             </div>
+
             <div class="clear"></div>
         </section>
         <section id="content-section-4">
             <div class="gdlr-color-wrapper  gdlr-show-all no-skin" style="background-color: #ffffff; padding-top: 70px; padding-bottom: 30px; ">
                 <div class="container">
-                    <div class="four columns">
-                        <div class="gdlr-ux column-service-ux">
-                            <div class="gdlr-item gdlr-column-service-item gdlr-type-2" style="margin-bottom: 45px;">
-                                <div class="column-service-image"><img src="upload/icon-service-1.png" alt="" width="70" height="70" /></div>
-                                <div class="column-service-content-wrapper">
-                                    <h3 class="column-service-title">Commodo Fringilla Nibh</h3>
-                                    <div class="column-service-content gdlr-skin-content">
-                                        <p>Sed posuere consectetur est at lobortis. Etiam porta sem malesuada magna mollis euismod. Nulla vitae elit libero, a pharetra augue. Cras mattis consecte.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="four columns">
-                        <div class="gdlr-ux column-service-ux">
-                            <div class="gdlr-item gdlr-column-service-item gdlr-type-2" style="margin-bottom: 45px;">
-                                <div class="column-service-image"><img src="upload/icon-service-2.png" alt="" width="70" height="70" /></div>
-                                <div class="column-service-content-wrapper">
-                                    <h3 class="column-service-title">Mattis Sollicitudin</h3>
-                                    <div class="column-service-content gdlr-skin-content">
-                                        <p>Sed posuere consectetur est at lobortis. Etiam porta sem malesuada magna mollis euismod. Nulla vitae elit libero, a pharetra augue. Cras mattis consecte.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="four columns">
-                        <div class="gdlr-ux column-service-ux">
-                            <div class="gdlr-item gdlr-column-service-item gdlr-type-2" style="margin-bottom: 45px;">
-                                <div class="column-service-image"><img src="upload/icon-service-4.png" alt="" width="70" height="70" /></div>
-                                <div class="column-service-content-wrapper">
-                                    <h3 class="column-service-title">Ultricies Purus Tristique</h3>
-                                    <div class="column-service-content gdlr-skin-content">
-                                        <p>Sed posuere consectetur est at lobortis. Etiam porta sem malesuada magna mollis euismod. Nulla vitae elit libero, a pharetra augue. Cras mattis consecte.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                    <div class="four columns">
-                        <div class="gdlr-ux column-service-ux">
-                            <div class="gdlr-item gdlr-column-service-item gdlr-type-2" style="margin-bottom: 45px;">
-                                <div class="column-service-image"><img src="upload/icon-service-3.png" alt="" width="70" height="70" /></div>
-                                <div class="column-service-content-wrapper">
-                                    <h3 class="column-service-title">Tristique Egestas Dolor</h3>
-                                    <div class="column-service-content gdlr-skin-content">
-                                        <p>Sed posuere consectetur est at lobortis. Etiam porta sem malesuada magna mollis euismod. Nulla vitae elit libero, a pharetra augue. Cras mattis consecte.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="four columns">
-                        <div class="gdlr-ux column-service-ux">
-                            <div class="gdlr-item gdlr-column-service-item gdlr-type-2" style="margin-bottom: 45px;">
-                                <div class="column-service-image"><img src="upload/icon-service-5.png" alt="" width="70" height="70" /></div>
-                                <div class="column-service-content-wrapper">
-                                    <h3 class="column-service-title">Amet Tristique Magna</h3>
-                                    <div class="column-service-content gdlr-skin-content">
-                                        <p>Sed posuere consectetur est at lobortis. Etiam porta sem malesuada magna mollis euismod. Nulla vitae elit libero, a pharetra augue. Cras mattis consecte.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="four columns">
-                        <div class="gdlr-ux column-service-ux">
-                            <div class="gdlr-item gdlr-column-service-item gdlr-type-2" style="margin-bottom: 45px;">
-                                <div class="column-service-image"><img src="upload/icon-service-6.png" alt="" width="70" height="70" /></div>
-                                <div class="column-service-content-wrapper">
-                                    <h3 class="column-service-title">Ornare Cras Ultricies</h3>
-                                    <div class="column-service-content gdlr-skin-content">
-                                        <p>Sed posuere consectetur est at lobortis. Etiam porta sem malesuada magna mollis euismod. Nulla vitae elit libero, a pharetra augue. Cras mattis consecte.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
+                    <h1 align="center" class="mb-5">Sejarah Singkat</h1>
+
+                    <p style="text-align: justify">
+                        Perusahaan ini merupakan perusahaan produksi Rokok. Nama Perusahaan ini adalah <b>PT Sehat Selalu Banyak Rejeki</b>, berada di Dusun Boro Ureg-ureg RT 06 RW 06, Desa Astrikaton, Kecamatan Pakis, Kabupaten Malang.
+                        Didirikan pada tahun 2020 oleh <b>Mochammad Abdul Wahab</b>. Pekerja dari perusahaan ini sejumlah 30 orang.
+                    </p>
                 </div>
+
             </div>
             <div class="clear"></div>
         </section>
@@ -251,16 +201,14 @@
         </div>
         <div class="modal-body">
             <h1>Edit Visi</h1>
-            <form action="" class="url" method="POST" enctype="multipart/form-data">
+            <form action="" class="url" method="POST" >
                 @csrf
+                @method('PUT')
                 <div class="form-group row mt-5">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Target</label>
                     <div class="col-sm-10">
                         <select class="custom-select code" name="idtarget" id="idtarget">
-                            {{-- <option>Choose...</option>
-                            @foreach ($target as $t)
-                                <option value="{{$t->id}}">{{$t->kategori}}</option>
-                            @endforeach --}}
+
                           </select>
                     </div>
                 </div>
@@ -282,8 +230,7 @@
         </div>
       </div>
     </div>
-  </div>
-
+</div>
 
 
   {{-- Edit Misi Modal --}}
@@ -298,9 +245,9 @@
         </div>
         <div class="modal-body">
             <h1>Edit Misi</h1>
-            <form action="{{route('misi.store')}}" method="POST" >
+            <form action="" class="url" method="POST" >
                 @csrf
-
+                @method('PUT')
                 <div class="form-group row mt-5">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Misi</label>
                     <div class="col-sm-10">

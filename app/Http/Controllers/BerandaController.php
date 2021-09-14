@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\News;
+use App\Models\Product;
+use App\Models\Testimonial;
 use App\Models\Vimi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -18,8 +20,10 @@ class BerandaController extends Controller
     {
         $vimi = Vimi::with('target')->get();
         $news = News::all();
+        $product = Product::all();
+        $test = Testimonial::all();
         // $news = Str::limit($news->berita, 50);
-        return view('menu.beranda', ['vimi' => $vimi, 'news' => $news]);
+        return view('menu.beranda', ['vimi' => $vimi, 'news' => $news, 'product' => $product, 'test' => $test]);
     }
 
     /**

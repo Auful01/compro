@@ -1,6 +1,8 @@
 <footer class="footer-wrapper">
-    <div class="footer-container container">
-        <div class="footer-column three columns" id="footer-widget-1">
+    <div class="footer-container container ">
+        <div class="row">
+
+        {{-- <div class="footer-column three columns" id="footer-widget-1">
             <div id="text-5" class="widget widget_text gdlr-item gdlr-widget">
                 <h3 class="gdlr-widget-title">About Us</h3>
                 <div class="clear"></div>
@@ -64,69 +66,54 @@
                     <div class="clear"></div>
                 </div>
             </div>
+        </div> --}}
+        <div class="col-md-9">
+            <img src="{{asset('gambar/SSBR.png')}}" style="width: 500px" alt="">
         </div>
-        <div class="footer-column three columns" id="footer-widget-4">
+        <div class="footer-column col-md-3" id="footer-widget-4">
             <div id="text-9" class="widget widget_text gdlr-item gdlr-widget">
                 <h3 class="gdlr-widget-title">Contact Info</h3>
                 <div class="clear"></div>
-                <div class="textwidget">Address: 184 Main Collins Street West Victoria 8007
+                <div class="textwidget">
+                    <div class="row">
+                        <div class="col-md-2 p-1">
+                            <img src="https://img.icons8.com/ios/25/FFFFFF/worldwide-location.png" class="ml-2"/>
+                        </div>
+                        <div class="col-md-10 p-1">
+                            <p class=" mb-0">Address: Dsn. Boro Ureg-Ureg RT 06 RW 06, Ds. Asrikaton, Kec. Pakis, Kab. Malang</p>
+                        </div>
+                    </div>
+
 
                     <span class="clear"></span><span class="gdlr-space"
                         style="margin-top: 10px; display: block;"></span>
 
-                    <i class="gdlr-icon fa fa-phone"
-                        style="vertical-align: middle; color: #fff; font-size: 16px; "></i> +1800-222-3333
+                        <img src="https://img.icons8.com/ios-filled/21/FFFFFF/phone.png"/>
+                        +62 852-3610-1109
+
 
                     <span class="clear"></span><span class="gdlr-space"
                         style="margin-top: 10px; display: block;"></span>
 
-                    <i class="gdlr-icon fa fa-mobile"
-                        style="vertical-align: middle; color: #fff; font-size: 20px; "></i> +1833-232-3443
+                        <img src="https://img.icons8.com/ios/21/FFFFFF/gmail--v2.png" />
+                        <p style="float: right">cahaya.pro213@gmail.com</p>
 
-                    <span class="clear"></span><span class="gdlr-space"
-                        style="margin-top: 10px; display: block;"></span>
-
-                    <i class="gdlr-icon fa fa-envelope-o"
-                        style="vertical-align: middle; color: #fff; font-size: 16px; "></i>
-                    contact@totalbusinesstheme.com
                 </div>
             </div>
         </div>
         <div class="clear"></div>
     </div>
 
+    </div>
+
     <div class="copyright-wrapper">
-        <div class="copyright-container container">
+        <div class="copyright-container container" align="center">
 
-            <div class="copyright-left">
-                <a href="#">
-                    <i class="gdlr-icon fa fa-facebook"
-                        style="vertical-align: middle;color: #bbbbbb;font-size: 20px"></i>
-                </a>
-                <a href="#">
-                    <i class="gdlr-icon fa fa-twitter"
-                        style="vertical-align: middle;color: #bbbbbb;font-size: 20px"></i>
-                </a>
-                <a href="#">
-                    <i class="gdlr-icon fa fa-dribbble"
-                        style="vertical-align: middle;color: #bbbbbb;font-size: 20px"></i>
-                </a>
-                <a href="#">
-                    <i class="gdlr-icon fa fa-pinterest"
-                        style="vertical-align: middle;color: #bbbbbb;font-size: 20px"></i>
-                </a>
-                <a href="#">
-                    <i class="gdlr-icon fa fa-google-plus"
-                        style="vertical-align: middle;color: #bbbbbb;font-size: 20px"></i>
-                </a>
-                <a href="#">
-                    <i class="gdlr-icon fa fa-instagram"
-                        style="vertical-align: middle;color: #bbbbbb;font-size: 20px"></i>
-                </a>
-            </div>
 
-            <div class="copyright-right">
-                Copyright 2021&copy;MRXTech, All Right Reserved </div>
+            Copyright 2021&copy;MRXTech, All Right Reserved
+
+            {{-- <div class="copyright-right"> --}}
+             {{-- </div> --}}
             <div class="clear"></div>
         </div>
     </div>

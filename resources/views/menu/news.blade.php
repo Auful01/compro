@@ -3,7 +3,7 @@
 
 @section('content')
 <div class="container">
-    <h1 align="center" style="font-weight: 700; letter-spacing: 5px" class="mb-3">NEWS</h1>
+    <h1 align="center" style="font-weight: 700; letter-spacing: 3px" class="mb-3">UPDATED NEWS</h1>
     @foreach ($news as $n)
     <div class="card w-100 p-2 mb-3 cl">
         <div class="card-body row">
@@ -11,13 +11,20 @@
                 <img src="{{'storage/'.$n->gambar}}" style="max-height: 250px;border-radius: 5px" alt="">
             </div>
             <div class="col-md-7">
-                <h5 class="card-title">{{$n->judul}}</h5>
+                <h3 class="card-title">{{$n->judul}}</h3>
                 <p class="card-text">{!! Str::limit($n->berita , 200, '...')!!}</p>
-                <a href="{{route('news.show', $n->idnews)}}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Detail"><img src="https://img.icons8.com/material-outlined/20/FFFFFF/link--v2.png"/></a>
-                <button type="button" class="btn btn-warning btn-modal-editNews" data-toggle="modal" data-url="{{ route('news.update' , $n->idnews)}}" data-id="{{$n->idnews}}" data-judul="{{$n->judul}}" data-gambar="{{'storage/'. $n->gambar}}" data-path={{$n->gambar}} data-berita="{{$n->berita}}" data-nama="{{$n->nama}}" data-target="#editNewsModal">
-                    <img src="https://img.icons8.com/material-outlined/20/FFFFFF/pencil--v3.png"/>
-                </button>
-                <a href="" class="btn btn-danger"><img src="https://img.icons8.com/material-outlined/20/FFFFFF/trash--v2.png"/></a>
+                <a href="{{route('news.show', $n->idnews)}}" class="btn btn-primary mb-1" data-toggle="tooltip" data-placement="top" title="Detail" ><img src="https://img.icons8.com/material-outlined/20/FFFFFF/link--v2.png"/></a>
+                @auth
+                <form action="{{route('news.destroy',$n->idnews)}}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <a href="" class="btn btn-warning btn-modal-editNews" data-toggle="tooltip" data-placement="top" title="Edit"data-toggle="modal" data-url="{{ route('news.update' , $n->idnews)}}" data-id="{{$n->idnews}}" data-judul="{{$n->judul}}" data-gambar="{{'storage/'. $n->gambar}}" data-path={{$n->gambar}} data-berita="{{$n->berita}}" data-nama="{{$n->nama}}" data-target="#editNewsModal">
+                        <img src="https://img.icons8.com/material-outlined/20/FFFFFF/pencil--v3.png"/>
+                    </a>
+                    <button href="" type="submit" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Hapus"><img src="https://img.icons8.com/material-outlined/20/FFFFFF/trash--v2.png"/></button>
+                </form>
+                @endauth
+
                 {{-- <a href=""></a> --}}
             </div>
 

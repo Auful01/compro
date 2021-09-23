@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 4.9.7
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Sep 14, 2021 at 12:38 PM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.2
+-- Host: localhost:3306
+-- Generation Time: Sep 23, 2021 at 03:10 PM
+-- Server version: 10.3.30-MariaDB-cll-lve
+-- PHP Version: 7.3.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `cahayapro`
+-- Database: `u3247950_cahayapro`
 --
 
 -- --------------------------------------------------------
@@ -85,7 +86,7 @@ CREATE TABLE `misi` (
 --
 
 INSERT INTO `misi` (`id`, `misi`, `created_at`, `updated_at`) VALUES
-(1, 'Mengedepankan inovasi dan pengembangan produk, jasa dan fasilitas umum', '2021-09-04 23:21:28', '2021-09-10 02:53:56');
+(1, 'Mewujudkan perusahaan yang mengedepankan inovasi, pengembangan sumber daya manusia, dan kualitas jasa, produk dan layanan.', '2021-09-04 23:21:28', '2021-09-18 01:16:32');
 
 -- --------------------------------------------------------
 
@@ -108,8 +109,8 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`idnews`, `nama`, `judul`, `gambar`, `berita`, `created_at`, `updated_at`) VALUES
-(1, 'Auful', 'cek', 'gambar/5yzFKzDEbl0fRgB53gPgaMvNiC6X1BVxgU1MZRqn.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus rhoncus velit, vitae dignissim dolor lacinia sit amet. Aliquam dolor libero, eleifend non tellus ac, aliquam efficitur libero. Suspendisse non ultrices erat. Proin a mauris in ante accumsan laoreet eget eu felis. Cras tincidunt molestie quam, quis pretium lectus. Pellentesque eget lacus sit amet lacus sodales mattis quis at sapien. In tempor tristique scelerisque. Morbi sodales elit lorem. Vivamus nisi ligula, tristique eu nunc quis, commodo lacinia nunc. Aenean eget tortor ullamcorper, dictum dui vel, dictum massa. Suspendisse potenti. Morbi varius malesuada sapien, faucibus interdum nisi pretium ac. Nullam leo purus, aliquam non ultricies eget, ullamcorper nec erat. Cras nisi mauris, mattis eu massa quis, maximus ultricies ligula.\r\n\r\nMauris a sem porta, laoreet ipsum vitae, egestas massa. Quisque tempus mollis nunc eget eleifend. In hac habitasse platea dictumst. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus fermentum sagittis nulla, vel fermentum arcu. Mauris ac ultrices massa. Phasellus vitae neque turpis. Vestibulum tincidunt accumsan tristique. Etiam pretium tincidunt quam, ac porta orci viverra vel. Aenean molestie, enim at pellentesque dapibus, urna urna rhoncus ligula, vitae venenatis velit diam ut est. Vestibulum luctus fermentum convallis. Nunc vehicula augue sit amet dolor tristique, eu pulvinar metus sollicitudin.\r\n\r\nInteger auctor ornare dui, quis lacinia ex fermentum vel. Sed condimentum molestie odio nec finibus. Praesent vehicula varius dictum. Nulla id tortor massa. Donec pretium elementum eros ut maximus. Aenean vitae nisl dolor. Fusce consectetur, risus sit amet placerat faucibus, neque dui ornare tellus, a tincidunt tellus ex at felis. Donec sodales arcu quam, eu rutrum leo auctor nec. Proin ut purus sit amet lacus ultricies pulvinar vel cursus leo. Pellentesque eget tortor id orci eleifend sollicitudin. Pellentesque venenatis sollicitudin augue id luctus. Suspendisse elementum fringilla ante in lacinia. Sed vehicula nec mauris ut pharetra.\r\n\r\nPhasellus vitae ex sit amet nibh molestie ullamcorper vel et ante. Pellentesque pharetra euismod mi a aliquet. In quis velit massa. Aenean gravida ligula ipsum, et elementum massa porttitor vitae. Curabitur at ligula eu erat interdum vehicula. Aliquam in feugiat libero. Nulla lobortis eros non nulla cursus, non lacinia dolor maximus. Curabitur sit amet massa enim. Sed elementum metus nibh, vel faucibus risus facilisis in. Duis vestibulum maximus scelerisque. Vivamus cursus sapien sit amet ipsum maximus, id consectetur tortor blandit. Vestibulum malesuada enim sit amet eros consequat interdum.\r\n\r\nIn molestie, metus vel lobortis lacinia, lacus purus tincidunt sem, at commodo lorem est eget magna. Vivamus neque elit, luctus sed felis in, rutrum iaculis lorem. Vestibulum sollicitudin nisi id velit egestas, non elementum elit blandit. Proin commodo ex odio. Aliquam ornare nisi felis. In bibendum felis erat, sit amet luctus elit viverra commodo. Nunc in ex nisi. Morbi pharetra convallis enim, sit amet egestas urna malesuada a. Fusce iaculis augue purus, quis volutpat magna dignissim hendrerit.\r\n\r\nPhasellus lacinia, justo eget ornare gravida, nulla arcu congue neque, at fermentum tellus lorem tristique est. Etiam gravida placerat vulputate. Curabitur sed felis quis sapien faucibus tincidunt non faucibus libero. Interdum et malesuada fames ac ante ipsum primis in faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur nec neque lorem. Maecenas in ante vel erat dapibus interdum. Pellentesque efficitur, justo at auctor tempus, magna mauris pellentesque tellus, at hendrerit erat magna quis eros.\r\n\r\nNullam pellentesque mauris ex, vel viverra sapien feugiat a. Nullam nec dignissim est. Praesent vestibulum tempor nulla. Suspendisse sed leo a diam vehicula tincidunt. Donec lacus odio, volutpat sed fermentum a, vehicula nec enim. Donec eu erat hendrerit dui laoreet placerat. Nulla facilisi. Morbi nec leo nisi.\r\n\r\nVestibulum non felis tellus. Vivamus efficitur tincidunt dolor, hendrerit interdum orci venenatis eu. Duis finibus, nibh nec tempor dictum, libero ipsum elementum est, non ultrices massa nulla id leo. Donec facilisis ante eget felis pharetra efficitur. Aliquam erat volutpat. Vestibulum iaculis imperdiet velit volutpat varius. Quisque dapibus elit nec accumsan ullamcorper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam porttitor ipsum vel elit vestibulum, non molestie urna efficitur.\r\n\r\nPellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus vestibulum imperdiet neque. Maecenas dui nibh, rutrum eu massa et, egestas mattis eros. Mauris id ultricies purus. Ut eleifend accumsan nunc vel malesuada. Mauris luctus ante in gravida aliquam. Quisque sollicitudin, nisi a dignissim ultricies, nisl neque blandit orci, in sagittis odio nunc eget dolor. Etiam in sodales orci. Aliquam bibendum magna diam, vitae facilisis ex vehicula at. Proin eu lorem malesuada, interdum nisi vitae, commodo lectus. Sed malesuada, orci eu elementum tincidunt, justo mi elementum odio, sed viverra nisl quam quis mi. Quisque quis ante urna.\r\n\r\nVivamus et orci nec odio sollicitudin elementum. Aenean nisi nibh, elementum in consectetur ac, laoreet tempor arcu. Nullam posuere urna sollicitudin ligula vestibulum, id facilisis felis tristique. Donec id risus sed sem elementum interdum. Nunc eget condimentum ligula. In non lacus ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras tempus urna in auctor vestibulum. Nunc euismod est tellus, sit amet molestie quam dictum in.', '2021-09-08 02:35:05', '2021-09-08 02:35:05'),
-(2, 'Auful', 'cek', 'gambar/CboXffjFdlHoqKxCym22U3T2nxRfkAkefkT5t84S.jpg', 'perkenalan dan pembahasan mengenai LayoutView dan design UI android', '2021-09-08 20:16:27', '2021-09-08 20:16:27'),
+(1, 'Fanda', 'Publikasi dan Kerjasama Toko', 'gambar/5yzFKzDEbl0fRgB53gPgaMvNiC6X1BVxgU1MZRqn.jpg', 'Dalam pengembangan branding produk yang dijual, kami bekerjasama dengan beberapa toko retail untuk memasang beberapa media publikasi.', '2021-09-08 02:35:05', '2021-09-18 01:18:19'),
+(2, 'Fanda', 'Sales', 'gambar/CboXffjFdlHoqKxCym22U3T2nxRfkAkefkT5t84S.jpg', 'Pengenalan produk baru Cahaya Pro 12 Reguler', '2021-09-08 20:16:27', '2021-09-18 01:19:06'),
 (3, 'Auful', 'cek', 'gambar/gKXrAtbUTTLYUjMhQTR6oseqsM3Zrpxkh4TYxAcM.jpg', 'perkenalan dan pembahasan mengenai LayoutView dan design UI android', '2021-09-08 20:17:29', '2021-09-08 20:17:29'),
 (4, 'Auful', 'asda', 'gambar/WJ0ovO5TgXLUQsc5vjhfT6vGme430fzEwQSoXUyw.jpg', '<span style=\"font-weight: bold; font-style: italic;\">Bismillahirrohmanirrohim</span><div><span style=\"font-style: italic;\">Alhamdulillahi</span></div>', '2021-09-08 20:44:21', '2021-09-09 03:39:37');
 
@@ -163,8 +164,10 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `nama_produk`, `gambar`, `deskripsi`, `created_at`, `updated_at`) VALUES
-(2, 'Lestari', 'gambar/GlclCHdWK0zhWPu6mlAg3CGJ3SdsHhDSOKHHvkqF.png', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', '2021-09-03 22:49:55', '2021-09-06 02:32:20'),
-(16, 'Cahaya Pro', 'gambar/GLinMnOOkUFxEYglJyPBNub2FftlOJbd3QFgfa9q.png', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', '2021-09-06 02:31:04', '2021-09-06 02:31:04');
+(16, 'Cahaya Pro 20 Exclusive', 'gambar/GLinMnOOkUFxEYglJyPBNub2FftlOJbd3QFgfa9q.png', 'Merupakan tipe Bold dengan perpaduan cengkeh dan tembakau yang pas. Memiliki rasa gurih dengan aroma harum yang khas.', '2021-09-06 02:31:04', '2021-09-22 03:07:52'),
+(17, 'Lestari (SKT12)', 'gambar/GlclCHdWK0zhWPu6mlAg3CGJ3SdsHhDSOKHHvkqF.png', 'Merupakan jenis rokok kretek tangan yang memiliki rasa manis dan harum akibat perpaduan tembakau dan cengkeh yang pas. Isi 12 batang.', '2021-09-03 15:49:55', '2021-09-22 03:10:07'),
+(19, 'Cahaya Pro 20 Black', 'gambar/tykfmBopnDQrbkCvCj2hABMv9VQiPztWv6tjEXYC.jpg', 'Jenis rokok Bold, isi 20 batang. Dengan karakteristik strong dan kekinian.', '2021-09-22 03:11:29', '2021-09-22 03:11:29'),
+(20, 'Cahaya Pro 12 Reguler', 'gambar/ytvxYyZayJ70fxECFNCDcBf4tMTkSsrZgVWcNt9K.jpg', 'Merupakan jenis rokok reguler, isi 12 batang. Karakteristik rokok ini terbilang ringan, manis, kekinian akibat perpaduan tembakau dan cengkeh yang pas.', '2021-09-22 03:14:19', '2021-09-22 03:14:19');
 
 -- --------------------------------------------------------
 
@@ -247,7 +250,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'auful', 'auful01@gmail.com', NULL, '$2y$10$INO9.x1Ty7vi6l6DnpEj9uqBB8v8EM4MqF8TcjZ6kSGAgBudIinKa', NULL, '2021-09-09 23:24:34', '2021-09-09 23:24:34');
+(1, 'auful', 'auful01@gmail.com', NULL, '$2y$10$INO9.x1Ty7vi6l6DnpEj9uqBB8v8EM4MqF8TcjZ6kSGAgBudIinKa', NULL, '2021-09-09 23:24:34', '2021-09-09 23:24:34'),
+(2, 'admin', 'cahaya.pro213@gmail.com', NULL, '$2y$10$8TRUWC.pn8snM4arOplpr.jsXh2R7vonRFtgQ2yHjMcWEChd0Uwle', '8u3V4E17AHcvsrZVB88HKsVZbIrHsQvLzIjU2jDNtomRauFu9REC01ylIz7y', '2021-09-14 17:12:21', '2021-09-14 17:12:21');
 
 -- --------------------------------------------------------
 
@@ -390,7 +394,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `profile`
@@ -414,7 +418,7 @@ ALTER TABLE `testimoni`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `vimi`

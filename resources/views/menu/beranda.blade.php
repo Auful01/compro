@@ -189,120 +189,36 @@
                 <div class="clear"></div>
             </section>
             <section id="content-section-4">
+
                 <div class="gdlr-color-wrapper  gdlr-show-all no-skin"
                     style="background-color: #ffffff; padding-top: 70px; padding-bottom: 20px; ">
-                    {{-- <div class="container">
-                        <div class="four columns">
-                            <div class="gdlr-ux column-service-ux">
-                                <div class="gdlr-item gdlr-column-service-item gdlr-type-1">
-                                    <div class="column-service-image"><img src="upload/icon-service-1.png"
-                                            alt="" width="70" height="70" /></div>
-                                    <div class="column-service-content-wrapper">
-                                        <h3 class="column-service-title">Commodo Fringilla Nibh</h3>
-                                        <div class="column-service-content gdlr-skin-content">
-                                            <p>Sed posuere consectetur est at lobortis. Etiam porta sem
-                                                malesuada magna mollis euismod. Nulla vitae elit libero, a
-                                                pharetra augue. Cras mattis consecte.</p>
+                    <div class="container-fluid">
+                        <div class="one-fifth column"></div>
+                        <div class="three-fifth columns">
+                            <div class="gdlr-testimonial-item-wrapper" style="margin-bottom: 40px;">
+                                <div class="gdlr-item-title-wrapper gdlr-item  gdlr-center gdlr-medium ">
+                                    <div class="gdlr-item-title-container container">
+                                        <div class="gdlr-item-title-head">
+                                            <h3 class="gdlr-item-title gdlr-skin-title gdlr-skin-border">
+                                                Produk Kami</h3>
+
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="four columns">
-                            <div class="gdlr-ux column-service-ux">
-                                <div class="gdlr-item gdlr-column-service-item gdlr-type-1">
-                                    <div class="column-service-image"><img src="upload/icon-service-2.png"
-                                            alt="" width="70" height="70" /></div>
-                                    <div class="column-service-content-wrapper">
-                                        <h3 class="column-service-title">Mattis Sollicitudin</h3>
-                                        <div class="column-service-content gdlr-skin-content">
-                                            <p>Sed posuere consectetur est at lobortis. Etiam porta sem
-                                                malesuada magna mollis euismod. Nulla vitae elit libero, a
-                                                pharetra augue. Cras mattis consecte.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="four columns">
-                            <div class="gdlr-ux column-service-ux">
-                                <div class="gdlr-item gdlr-column-service-item gdlr-type-1">
-                                    <div class="column-service-image"><img src="upload/icon-service-4.png"
-                                            alt="" width="70" height="70" /></div>
-                                    <div class="column-service-content-wrapper">
-                                        <h3 class="column-service-title">Ultricies Purus Tristique</h3>
-                                        <div class="column-service-content gdlr-skin-content">
-                                            <p>Sed posuere consectetur est at lobortis. Etiam porta sem
-                                                malesuada magna mollis euismod. Nulla vitae elit libero, a
-                                                pharetra augue. Cras mattis consecte.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clear"></div>
-                        <div class="four columns">
-                            <div class="gdlr-ux column-service-ux">
-                                <div class="gdlr-item gdlr-column-service-item gdlr-type-1">
-                                    <div class="column-service-image"><img src="upload/icon-service-3.png"
-                                            alt="" width="70" height="70" /></div>
-                                    <div class="column-service-content-wrapper">
-                                        <h3 class="column-service-title">Tristique Egestas Dolor</h3>
-                                        <div class="column-service-content gdlr-skin-content">
-                                            <p>Sed posuere consectetur est at lobortis. Etiam porta sem
-                                                malesuada magna mollis euismod. Nulla vitae elit libero, a
-                                                pharetra augue. Cras mattis consecte.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="four columns">
-                            <div class="gdlr-ux column-service-ux">
-                                <div class="gdlr-item gdlr-column-service-item gdlr-type-1">
-                                    <div class="column-service-image"><img src="upload/icon-service-5.png"
-                                            alt="" width="70" height="70" /></div>
-                                    <div class="column-service-content-wrapper">
-                                        <h3 class="column-service-title">Amet Tristique Magna</h3>
-                                        <div class="column-service-content gdlr-skin-content">
-                                            <p>Sed posuere consectetur est at lobortis. Etiam porta sem
-                                                malesuada magna mollis euismod. Nulla vitae elit libero, a
-                                                pharetra augue. Cras mattis consecte.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="four columns">
-                            <div class="gdlr-ux column-service-ux">
-                                <div class="gdlr-item gdlr-column-service-item gdlr-type-1">
-                                    <div class="column-service-image"><img src="upload/icon-service-6.png"
-                                            alt="" width="70" height="70" /></div>
-                                    <div class="column-service-content-wrapper">
-                                        <h3 class="column-service-title">Ornare Cras Ultricies</h3>
-                                        <div class="column-service-content gdlr-skin-content">
-                                            <p>Sed posuere consectetur est at lobortis. Etiam porta sem
-                                                malesuada magna mollis euismod. Nulla vitae elit libero, a
-                                                pharetra augue. Cras mattis consecte.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clear"></div>
-                    </div> --}}
-                    <h1 align="center" class="mb-4">Produk Kami</h1>
-                    <div class="flexslider" data-type="carousel"
+
+
+                                <div class="gdlr-item gdlr-testimonial-item carousel large plain-style">
+                                    <div class="gdlr-ux gdlr-testimonial-ux">
+                                        <div class="flexslider" data-type="carousel"
                                             data-nav-container="gdlr-testimonial-item" data-columns="1">
                                             <ul class="slides">
                                                 @foreach ($product as $p)
-
                                                 <li class="testimonial-item">
-                                                    <div class="row align-items-center">
+                                                    <div class="row align-items-center justify-content-between">
                                                         <div class="col-md-4 mb-2  d-flex justify-content-center">
-                                                            <img src="{{'storage/'.$p->gambar}}" id="gambar" style="max-width: 300px">
+                                                            <img src="{{'storage/'.$p->gambar}}" id="gambar" style="width: 200px">
                                                         </div>
-                                                          <div class="col-md-7 mr-1 desc align-middle">
+                                                          <div class="col-md-7 align-middle">
                                                                   <h1>{{$p->nama_produk}}</h1><br>
                                                                     <p class="text-justify" >{{$p->deskripsi}}</p> <br>
 
@@ -318,33 +234,42 @@
                                                           </div>
                                                     </div>
 
+                                                    {{-- <div class="testimonial-content gdlr-skin-content">
+                                                        <p>{{$t->testi}}</p>
+                                                    </div>
+                                                    <div class="testimonial-info"><span
+                                                            class="testimonial-author gdlr-skin-link-color">{{$t->nama}}<span>, </span></span><span
+                                                            class="testimonial-position gdlr-skin-info">{{$t->kategori}}</span></div>
+                                                            @auth
+                                                            <form action="{{route('testi.destroy', $t->id)}}" method="POST" >
+                                                                @csrf
+                                                                @method('DELETE')
+                                                                <button type="submit" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="top" title="Hapus" onclick="return confirm('Apakah anda yakin ingin Menghapus ini?')"><img src="https://img.icons8.com/material-outlined/24/000000/trash--v2.png"/></button>
+                                                                <a href="" class="btn btn-sm btn-warning btn-modal-editTesti" data-toggle="tooltip" data-placement="top" title="Edit"  data-toggle="modal" data-id="{{$t->id}}" data-url="{{route('testi.update', $t->id)}}"  data-kategori="{{$t->kategori}}" data-testi="{{$t->testi}}" data-nama="{{$t->nama}}" data-target="#editTestiModal"><img src="https://img.icons8.com/material-outlined/24/000000/pencil--v3.png"/></a>
+                                                            </form>
+                                                            @endauth --}}
                                                 </li>
-                                                @endforeach
+                                             @endforeach
 
                                             </ul>
-                    </div>
-                    {{-- @foreach ($product as $p)
-                    <div class="col-md-6 mb-2  d-flex justify-content-center">
-                      <img src="{{'storage/'.$p->gambar}}" id="gambar" style="max-width: 300px">
-                    </div>
-                    <div class="col-md-6  ">
-                        <div class="desc align-middle" style="top:50%">
-                            <h1>{{$p->nama_produk}}</h1><br>
-                              <p class="text-justify" >{{$p->deskripsi}}</p> <br>
-
-                              @auth
-                              <form action="{{ route('product.destroy',$p->id) }}" method="POST">
-                                  @csrf
-                                  @method('DELETE')
-                              <a href="" class="btn btn-sm btn-warning btn-modal-editProduk "  data-toggle="modal"  data-target="#editProdukModal" data-id="{{$p->id}}" data-nama="{{$p->nama_produk}}" data-gambar="{{'storage/'.$p->gambar}}" data-desc="{{$p->deskripsi}} " data-url="{{route('product.update', $p->id)}}" data-path="{{$p->gambar}}"><img src="https://img.icons8.com/material-outlined/24/000000/pencil--v3.png"/></a>
-                              <button type="submit" class="btn btn-sm  btn-danger" onclick="return confirm('apakah anda ingin Menghapus produk ini?')"><img src="https://img.icons8.com/material-outlined/24/000000/trash--v2.png"/></button>
-                          </form>
-                              @endauth
-
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gdlr-item-title-nav gdlr-nav-container  gdlr-center gdlr-large"><i
+                                        class="icon-angle-left gdlr-flex-prev"></i><i
+                                        class="icon-angle-right gdlr-flex-next"></i></div>
+                            </div>
                         </div>
+                        <div class="clear"></div>
+                        @auth
+                        <div class="d-flex  justify-content-center">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#inputTestiModal">
+                                Tambah Testi
+                            </button>
+                        </div>
+                        @endauth
                     </div>
-                    @endforeach
-                </div> --}}
+                </div>
                 <div class="clear"></div>
             </section>
             {{-- <section id="content-section-5">

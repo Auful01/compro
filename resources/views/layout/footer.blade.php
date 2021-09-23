@@ -1,6 +1,6 @@
 <footer class="footer-wrapper">
     <div class="footer-container container ">
-        <div class="row">
+        <div class="row d-flex justify-content-between">
 
         {{-- <div class="footer-column three columns" id="footer-widget-1">
             <div id="text-5" class="widget widget_text gdlr-item gdlr-widget">
@@ -67,23 +67,20 @@
                 </div>
             </div>
         </div> --}}
-        <div class="col-md-9">
-            <img src="{{asset('gambar/SSBR.png')}}" style="width: 500px" alt="">
+        <div class="col-md-7 d-flex justify-content-center ">
+            <img src="{{asset('gambar/SSBR.png')}}" style="width: 600px;padding-bottom: 35px;" alt="">
         </div>
-        <div class="footer-column col-md-3" id="footer-widget-4">
+        <div class="footer-column col-md-4" id="footer-widget-4">
             <div id="text-9" class="widget widget_text gdlr-item gdlr-widget">
                 <h3 class="gdlr-widget-title">Contact Info</h3>
                 <div class="clear"></div>
                 <div class="textwidget">
-                    <div class="row">
-                        <div class="col-md-2 p-1">
-                            <img src="https://img.icons8.com/ios/25/FFFFFF/worldwide-location.png" class="ml-2"/>
-                        </div>
-                        <div class="col-md-10 p-1">
-                            <p class=" mb-0">Address: Dsn. Boro Ureg-Ureg RT 06 RW 06, Ds. Asrikaton, Kec. Pakis, Kab. Malang</p>
-                        </div>
-                    </div>
 
+                    <span class="clear"></span><span class="gdlr-space"
+                    style="margin-top: 10px; display: block;"></span>
+
+                    <img src="https://img.icons8.com/ios/25/FFFFFF/worldwide-location.png" class="ml-2"/>
+                    &nbsp;Address: Dsn. Boro Ureg-Ureg RT 06 RW 06, Ds. Asrikaton, Kec. Pakis, Kab. Malang
 
                     <span class="clear"></span><span class="gdlr-space"
                         style="margin-top: 10px; display: block;"></span>
@@ -96,7 +93,7 @@
                         style="margin-top: 10px; display: block;"></span>
 
                         <img src="https://img.icons8.com/ios/21/FFFFFF/gmail--v2.png" />
-                        <p style="float: right">cahaya.pro213@gmail.com</p>
+                        &nbsp;cahaya.pro213@gmail.com
 
                 </div>
             </div>

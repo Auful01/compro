@@ -10,7 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Total Business &#8211; Multi Purpose Template</title>
+    <title>Cahaya Pro</title>
+    <link rel="icon" href="{{asset('gambar/cp.png')}}">
     {{-- <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet"> --}}
     <link rel='stylesheet' href='{{asset('css/style.css')}}' type='text/css' media='all' />
     <link rel='stylesheet' href='{{asset('css/superfish.css')}}' type='text/css' media='all' />

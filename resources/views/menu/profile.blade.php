@@ -137,7 +137,7 @@
             </div>
             <div class="clear"></div>
         </section>
-        <section id="content-section-5">
+        {{-- <section id="content-section-5">
             <div class="gdlr-parallax-wrapper gdlr-background-image gdlr-show-all no-skin" id="gdlr-parallax-wrapper-3" data-bgspeed="0.1" style="background-repeat: no-repeat; background-image: url('{{asset('gambar/SSBR.png')}}');padding-top: 100px; padding-bottom: 70px;">
                 <div class="container" style="font-weight: 800">
                     <div class="three columns" >
@@ -172,7 +172,7 @@
                 </div>
             </div>
             <div class="clear"></div>
-        </section>
+        </section> --}}
     </div>
     <!-- Below Sidebar Section-->
 

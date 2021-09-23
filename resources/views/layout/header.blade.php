@@ -9,8 +9,8 @@
             <div class="gdlr-logo">
                 <div class="gdlr-logo-inner">
                     <a href="index.html">
-                        <!-- <img src="upload/logo.png" alt="" width="393" height="72" /> -->
-                        <h3 style="font-weight: 600;">Cahaya Pro</h3>
+                        <img src="{{asset('gambar/cahayapro.png')}}" alt="" width="100"  style="height: 50px" />
+
                     </a>
                 </div>
                 <div class="gdlr-responsive-navigation dl-menuwrapper" id="gdlr-responsive-navigation">
@@ -109,11 +109,11 @@
             <div class="gdlr-navigation-wrapper">
                 <nav class="gdlr-navigation" id="gdlr-main-navigation">
                     <ul id="menu-main-menu-1" class="sf-menu gdlr-main-menu">
-                        <li class="menu-item menu-item-home current-menu-item  gdlr-normal-menu"><a href="{{url('/beranda')}}">Home</a></li>
-                        <li class="menu-item menu-item-has-children gdlr-normal-menu"><a href="{{route('product.index')}}" class="sf-with-ul-pre">Product</a></li>
-                        <li class="menu-item menu-item-has-children gdlr-normal-menu"><a href="{{route('profile.index')}}" class="sf-with-ul-pre">Profile</a></li>
-                        <li class="menu-item menu-item-has-children  gdlr-normal-menu"><a href="{{route('news.index')}}">news</a></li>
-                        <li class="menu-item menu-item-has-children gdlr-normal-menu"><a href="{{url('contact')}}" class="sf-with-ul-pre">Contact</a></li>
+                        <li class="menu-item menu-item-home {{ Request::segment(1) === 'beranda' ? 'current-menu-item ' : null }}   gdlr-normal-menu"><a href="{{url('/beranda')}}">Home</a></li>
+                        <li class="menu-item menu-item-has-children  {{ Request::segment(1) === 'product' ? 'current-menu-item ' : null }}  gdlr-normal-menu"><a href="{{route('product.index')}}" class="sf-with-ul-pre">Product</a></li>
+                        <li class="menu-item menu-item-has-children  {{ Request::segment(1) === 'profile' ? 'current-menu-item ' : null }}  gdlr-normal-menu"><a href="{{route('profile.index')}}" class="sf-with-ul-pre">Profile</a></li>
+                        <li class="menu-item menu-item-has-children  {{ Request::segment(1) === 'news' ? 'current-menu-item ' : null }}  gdlr-normal-menu"><a href="{{route('news.index')}}">news</a></li>
+                        <li class="menu-item menu-item-has-children  {{ Request::segment(1) === 'contact' ? 'current-menu-item ' : null }} gdlr-normal-menu"><a href="{{url('contact')}}" class="sf-with-ul-pre" target="_blank">Contact</a></li>
                         {{-- <li>{{ Auth::user()->name }}</li> --}}
                         @auth
                         <li class="nav-item dropdown">

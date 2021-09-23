@@ -43,134 +43,11 @@
             </button>
           </div>
         <!-- Above Sidebar Section-->
-        {{-- <div class="above-sidebar-wrapper">
-            <section id="content-section-1">
-                <div class="gdlr-full-size-wrapper gdlr-show-all no-skin"
-                    style="padding-bottom: 0px;  background-color: #ffffff; ">
-                    <div class="gdlr-master-slider-item gdlr-slider-item gdlr-item" style="margin-bottom: 0px;">
-                        <!-- MasterSlider -->
-                        <div id="P_MS5bab48b0b8b8a" class="master-slider-parent ms-parent-id-11">
 
-                            <!-- MasterSlider Main -->
-                            <div id="MS5bab48b0b8b8a" class="master-slider ms-skin-default">
-
-                                <div class="ms-slide" data-delay="7" data-fill-mode="fill">
-                                    <img src="{{asset('assets/css/blank.gif')}}" alt="" title=""
-                                        data-src="upload/rokok3.jpg" />
-
-                                    <div class="ms-layer  msp-cn-11-1" style=""
-                                        data-effect="t(true,n,n,500,n,n,n,n,n,n,n,n,n,n,n)" data-duration="387"
-                                        data-ease="easeOutQuint" data-offset-x="-2" data-offset-y="-144"
-                                        data-origin="ml" data-position="normal">
-                                        SELAMAT DATANG</div>
-
-                                    <div class="ms-layer  msp-cn-11-2" style=""
-                                        data-effect="t(true,n,n,-500,n,n,n,n,n,n,n,n,n,n,n)" data-duration="387"
-                                        data-delay="387" data-ease="easeOutQuint" data-offset-x="2"
-                                        data-offset-y="-33" data-origin="ml" data-position="normal">
-                                        Total Business</div>
-
-                                    <div class="ms-layer  msp-cn-11-4" style=""
-                                        data-effect="t(true,n,n,-500,n,n,n,n,n,n,n,n,n,n,n)" data-duration="400"
-                                        data-delay="750" data-ease="easeOutQuint" data-offset-x="3"
-                                        data-offset-y="396" data-origin="tl" data-position="normal">
-                                        PT. SEHAT SELALU BANYAK REJEKI</div>
-
-                                    <a href="" target="_self"
-                                        class="ms-layer ms-btn ms-btn-round ms-btn-n msp-preset-btn-159"
-                                        data-duration="437" data-delay="1112" data-ease="easeOutQuint"
-                                        data-type="button" data-offset-x="3" data-offset-y="132"
-                                        data-origin="ml" data-position="normal">Learn More</a>
-
-                                </div>
-                                <div class="ms-slide" data-delay="7" style="background: #04040485;"
-                                    data-fill-mode="fill">
-                                    <img src="{{asset('assets/css/blank.gif')}}" alt="" title=""
-                                        data-src="{{asset('upload/rokok4.png')}}" />
-
-                                    <div class="ms-layer  msp-cn-11-5" style="color: rgb(0, 0, 0);"
-                                        data-effect="t(true,n,n,-500,n,n,n,n,n,n,n,n,n,n,n)" data-duration="387"
-                                        data-ease="easeOutQuint" data-offset-x="20" data-offset-y="-33"
-                                        data-origin="mr" data-position="normal">
-                                        Good Website</div>
-
-                                    <div class="ms-layer  msp-cn-11-4" style=""
-                                        data-effect="t(true,n,n,500,n,n,n,n,n,n,n,n,n,n,n)" data-duration="387"
-                                        data-delay="425" data-ease="easeOutQuint" data-offset-x="30"
-                                        data-offset-y="52" data-origin="mr" data-position="normal">
-                                        Help Growing Your Business</div>
-
-                                    <a href="" target="_self"
-                                        class="ms-layer ms-btn ms-btn-round ms-btn-n msp-preset-btn-159"
-                                        data-duration="437" data-delay="800" data-ease="easeOutQuint"
-                                        data-type="button" data-offset-x="29" data-offset-y="128"
-                                        data-origin="mr" data-position="normal">
-                                        Learn More</a>
-
-                                </div>
-
-                            </div>
-                            <!-- END MasterSlider Main -->
-
-                        </div>
-                        <!-- END MasterSlider -->
-
-
-
-                    </div>
-                    <div class="clear"></div>
-                    <div class="clear"></div>
-                </div>
-                <div class="clear"></div>
-            </section>
-        </div> --}}
 
         <!-- Sidebar With Content Section-->
         <div class="with-sidebar-wrapper">
-            {{-- <section id="content-section-2">
-                <div class="gdlr-full-size-wrapper gdlr-show-all gdlr-skin-service-half"
-                    style="padding-bottom: 0px;  background-color: #ffffff; ">
-                    <div class="gdlr-service-half-background-item" style="margin-bottom: 0px;">
-                        <div class="gdlr-half-left"
-                            style="background-image: url('{{asset('upload/rokok.jfif')}}'); background-repeat: no-repeat; background-size: cover;">
-                            <div class="half-container">
-                                <div class="gdlr-item-margin">
-                                    <h3 class="gdlr-left-service-title">We have served more than 10,000
-                                        customers</h3>
-                                    <div class="gdlr-left-service-content" style="color: white;">
-                                        <p>Donec ullamcorper nulla non metus auctor fringilla. Integer posuere
-                                            erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae
-                                            elit libero, a pharetra augue. Nulla vitae elit libero, a pharetra
-                                            augue. Cum sociis natoque penatibus et magnis dis parturient montes,
-                                            nascetur ridiculus mus. Donec id elit non mi porta gravida at eget
-                                            metus. Donec id elit non mi porta gravida at eget metus.</p>
-                                    </div><a class="gdlr-left-service-read-more" href="#">Take A Tour</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gdlr-half-right" style="background: #262626;">
-                            <div class="half-container">
-                                <div class="gdlr-item-margin">
-                                    <h3 class="gdlr-right-service-title">We provide fast & great customer
-                                        support</h3>
-                                    <div class="gdlr-right-service-caption">
-                                        <p>Donec ullamcorper nulla non metus auctor fringilla. Integer posuere
-                                            erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae
-                                            elit libero, a pharetra augue. Nulla vitae elit libero, a pharetra
-                                            augue. Cum sociis natoque penatibus et magnis dis parturient montes,
-                                            nascetur ridiculus mus. Donec id elit non mi porta gravida at eget
-                                            metus. Donec id elit non mi porta gravida at eget metus.</p>
-                                    </div><a class="gdlr-right-service-read-more" href="#">Take A Tour</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-                    <div class="clear"></div>
-                    <div class="clear"></div>
-                </div>
-                <div class="clear"></div>
-            </section> --}}
+
             <section id="content-section-3">
                 <div class="gdlr-color-wrapper  gdlr-show-all gdlr-skin-stunning-text-small"
                     style="background-color: #36bddb; padding-top: 55px; padding-bottom: 34px; ">
@@ -234,20 +111,7 @@
                                                           </div>
                                                     </div>
 
-                                                    {{-- <div class="testimonial-content gdlr-skin-content">
-                                                        <p>{{$t->testi}}</p>
-                                                    </div>
-                                                    <div class="testimonial-info"><span
-                                                            class="testimonial-author gdlr-skin-link-color">{{$t->nama}}<span>, </span></span><span
-                                                            class="testimonial-position gdlr-skin-info">{{$t->kategori}}</span></div>
-                                                            @auth
-                                                            <form action="{{route('testi.destroy', $t->id)}}" method="POST" >
-                                                                @csrf
-                                                                @method('DELETE')
-                                                                <button type="submit" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="top" title="Hapus" onclick="return confirm('Apakah anda yakin ingin Menghapus ini?')"><img src="https://img.icons8.com/material-outlined/24/000000/trash--v2.png"/></button>
-                                                                <a href="" class="btn btn-sm btn-warning btn-modal-editTesti" data-toggle="tooltip" data-placement="top" title="Edit"  data-toggle="modal" data-id="{{$t->id}}" data-url="{{route('testi.update', $t->id)}}"  data-kategori="{{$t->kategori}}" data-testi="{{$t->testi}}" data-nama="{{$t->nama}}" data-target="#editTestiModal"><img src="https://img.icons8.com/material-outlined/24/000000/pencil--v3.png"/></a>
-                                                            </form>
-                                                            @endauth --}}
+
                                                 </li>
                                              @endforeach
 
@@ -255,9 +119,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="gdlr-item-title-nav gdlr-nav-container  gdlr-center gdlr-large"><i
-                                        class="icon-angle-left gdlr-flex-prev"></i><i
-                                        class="icon-angle-right gdlr-flex-next"></i></div>
+                                <div class="gdlr-item-title-nav gdlr-nav-container  gdlr-center gdlr-large" style="margin:0px">
+                                    <i class="icon-angle-left gdlr-flex-prev"></i>
+                                    <i class="icon-angle-right gdlr-flex-next"></i>
+                                </div>
+                                <div class="d-flex justify-content-center mt-4">
+                                    <a href="{{route('product.index')}}" class="btn btn-primary" >Detail Produk</a>
+                                </div>
                             </div>
                         </div>
                         <div class="clear"></div>
@@ -272,27 +140,7 @@
                 </div>
                 <div class="clear"></div>
             </section>
-            {{-- <section id="content-section-5">
-                <div class="gdlr-parallax-wrapper gdlr-background-image gdlr-show-all gdlr-skin-dark-skin"
-                    id="gdlr-parallax-wrapper-1" data-bgspeed="0.05"
-                    style="background-image: url('{{asset('upload/rokok3.jpg')}}'); padding-top: 110px; padding-bottom: 80px; ">
-                    <div class="container">
-                        <div class="gdlr-stunning-item-ux gdlr-ux">
-                            <div class="gdlr-item gdlr-stunning-item gdlr-button-on gdlr-stunning-left">
-                                <h2 class="stunning-item-title">It’s The Best WordPress Theme.</h2>
-                                <div class="stunning-item-caption gdlr-skin-content">
-                                    <p>This theme comes with many awesome features and it suits to any kind of
-                                        businesses. You will love it!</p>
-                                </div><a class="stunning-item-button gdlr-button " href="#"
-                                    target="_blank">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="clear"></div>
-                        <div class="clear"></div>
-                    </div>
-                </div>
-                <div class="clear"></div>
-            </section> --}}
+
             <section id="content-section-6">
                 <div class="gdlr-full-size-wrapper gdlr-show-all gdlr-skin-dark-skin"
                     style="padding-top: 45px; padding-bottom: 0px;  background-color: #2f2f2f; ">
@@ -385,18 +233,9 @@
                                                 <div class="portfolio-overlay-content">
                                                     <h3 class="portfolio-title"><a href="#">Video inside this
                                                             post</a></h3>
-                                                    {{-- <div class="gdlr-portfolio-info">
-                                                        <div class="portfolio-info portfolio-tag"><span
-                                                                class="info-head gdlr-title">Tags </span><a
-                                                                href="#" rel="tag">Carpenter</a><span
-                                                                class="sep">,</span> <a href="#"
-                                                                rel="tag">Works</a></div>
-                                                        <div class="clear"></div>
-                                                    </div> --}}
+
                                                 </div>
-                                                {{-- <a class="portfolio-overlay-icon" href="#"><span
-                                                        class="portfolio-icon"><i
-                                                            class="fa fa-link"></i></span></a> --}}
+
                                             </div>
                                         </div>
                                     </div>
@@ -436,110 +275,17 @@
                             <h1 align="center" class="mb-5">Sejarah Singkat</h1>
 
                             <p style="text-align: justify">
-                                Perusahaan ini merupakan perusahaan produksi Rokok. Nama Perusahaan ini adalah <b>PT Sehat Selalu Banyak Rejeki</b>, berada di Dusun Boro Ureg-ureg RT 06 RW 06, Desa Astrikaton, Kecamatan Pakis, Kabupaten Malang.
+                                Perusahaan ini merupakan perusahaan pendistribusian Rokok. Nama Perusahaan ini adalah <b>PT Sehat Selalu Banyak Rejeki</b>, berada di Dusun Boro Ureg-ureg RT 06 RW 06, Desa Astrikaton, Kecamatan Pakis, Kabupaten Malang.
                                 Didirikan pada tahun 2020 oleh <b>Mochammad Abdul Wahab</b>. Pekerja dari perusahaan ini sejumlah 30 orang.
                             </p>
                         </div>
-                        {{-- <div class="six columns">
-                            <div class="gdlr-item gdlr-about-us-item gdlr-plain">
-                                <div class="about-us-title-wrapper">
-                                    <h3 class="about-us-title">About Us</h3>
-                                    <div class="about-us-title-divider"></div>
-                                </div>
-                                <div class="about-us-content-wrapper">
-                                    <div class="about-us-content gdlr-skin-content">
-                                        <p>Donec ullamcorper nulla non metus auctor fringilla. Integer posuere
-                                            erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae
-                                            elit libero, a pharetra augue. Nulla vitae elit libero, a pharetra
-                                            augue. Cum sociis natoque penatibus et magnis dis parturient montes,
-                                            nascetur ridiculus mus.  Donec id elit non mi porta gravida at eget
-                                            metus. Donec id elit non mi porta gravida at eget metus.</p>
-                                    </div><a class="about-us-read-more " href="#">Read More</a>
-                                </div>
-                                <div class="clear"></div>
-                            </div>
-                        </div>
-                        <div class="six columns">
-                            <div class="gdlr-skill-bar-wrapper  gdlr-item gdlr-size-small"><span
-                                    class="skill-bar-content" style="color: #3a3a3a;">Advanced
-                                    Technologies</span><span class="skill-bar-percent"
-                                    style="color: #3a3a3a;">80%</span>
-                                <div class="gdlr-skill-bar gdlr-ux" style="background-color: #e9e9e9;">
-                                    <div class="gdlr-skill-bar-progress" data-percent="80"
-                                        style="background-color: #36bddb;"></div>
-                                </div>
-                            </div>
-                            <div class="gdlr-skill-bar-wrapper  gdlr-item gdlr-size-small"><span
-                                    class="skill-bar-content" style="color: #3a3a3a;">Production
-                                    Capacity</span><span class="skill-bar-percent"
-                                    style="color: #3a3a3a;">95%</span>
-                                <div class="gdlr-skill-bar gdlr-ux" style="background-color: #e9e9e9;">
-                                    <div class="gdlr-skill-bar-progress" data-percent="95"
-                                        style="background-color: #36bddb;"></div>
-                                </div>
-                            </div>
-                            <div class="gdlr-skill-bar-wrapper  gdlr-item gdlr-size-small"><span
-                                    class="skill-bar-content" style="color: #3a3a3a;">Utilization
-                                    Rate</span><span class="skill-bar-percent"
-                                    style="color: #3a3a3a;">70%</span>
-                                <div class="gdlr-skill-bar gdlr-ux" style="background-color: #e9e9e9;">
-                                    <div class="gdlr-skill-bar-progress" data-percent="70"
-                                        style="background-color: #36bddb;"></div>
-                                </div>
-                            </div>
-                            <div class="gdlr-skill-bar-wrapper  gdlr-item gdlr-size-small"><span
-                                    class="skill-bar-content" style="color: #3a3a3a;">Customer
-                                    Satisfaction</span><span class="skill-bar-percent"
-                                    style="color: #3a3a3a;">100%</span>
-                                <div class="gdlr-skill-bar gdlr-ux" style="background-color: #e9e9e9;">
-                                    <div class="gdlr-skill-bar-progress" data-percent="100"
-                                        style="background-color: #36bddb;"></div>
-                                </div>
-                            </div>
-                        </div> --}}
+
                         <div class="clear"></div>
                     </div>
                 </div>
                 <div class="clear"></div>
             </section>
-            {{-- <section id="content-section-8">
-                <div class="gdlr-parallax-wrapper gdlr-background-image gdlr-show-all no-skin"
-                    id="gdlr-parallax-wrapper-2" data-bgspeed="0.1"
-                    style="background-image: url('{{asset('upload/rokok1.jpg')}}'); padding-top: 100px; padding-bottom: 70px; ">
-                    <div class="container">
-                        <div class="three columns">
-                            <div class="gdlr-skill-item-wrapper gdlr-skin-content gdlr-item gdlr-style-1">
-                                <div class="gdlr-skill-item-title" style="color: #ffffff;">350</div>
-                                <div class="gdlr-skill-item-divider" style="border-color: #ffffff;"></div>
-                                <div class="gdlr-skill-item-caption" style="color: #ffffff;">Employees</div>
-                            </div>
-                        </div>
-                        <div class="three columns">
-                            <div class="gdlr-skill-item-wrapper gdlr-skin-content gdlr-item gdlr-style-1">
-                                <div class="gdlr-skill-item-title" style="color: #ffffff;">12000</div>
-                                <div class="gdlr-skill-item-divider" style="border-color: #ffffff;"></div>
-                                <div class="gdlr-skill-item-caption" style="color: #ffffff;">Square Feet</div>
-                            </div>
-                        </div>
-                        <div class="three columns">
-                            <div class="gdlr-skill-item-wrapper gdlr-skin-content gdlr-item gdlr-style-1">
-                                <div class="gdlr-skill-item-title" style="color: #ffffff;">2400</div>
-                                <div class="gdlr-skill-item-divider" style="border-color: #ffffff;"></div>
-                                <div class="gdlr-skill-item-caption" style="color: #ffffff;">Happy Clients</div>
-                            </div>
-                        </div>
-                        <div class="three columns">
-                            <div class="gdlr-skill-item-wrapper gdlr-skin-content gdlr-item gdlr-style-1">
-                                <div class="gdlr-skill-item-title" style="color: #ffffff;">350</div>
-                                <div class="gdlr-skill-item-divider" style="border-color: #ffffff;"></div>
-                                <div class="gdlr-skill-item-caption" style="color: #ffffff;">Employees</div>
-                            </div>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-                </div>
-                <div class="clear"></div>
-            </section> --}}
+
             <section id="content-section-9">
                 <div class="gdlr-parallax-wrapper gdlr-background-image gdlr-show-all gdlr-skin-dark-skin"
                     id="gdlr-parallax-wrapper-3" data-bgspeed="0"

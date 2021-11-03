@@ -212,6 +212,7 @@
                     $('.gambar').attr('src', gambar)
                     $('.gbrlama').val(gbrlama)
                     $('.url').attr('action', url)
+                    console.log
                 })
             })
 

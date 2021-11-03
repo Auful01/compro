@@ -68,7 +68,7 @@
                                 <a href="{{route('beranda.index')}}" class="btn btn-success justify-content-end">
                                     {{ __('Guest') }}
                                 </a>
-                                <a class="btn btn-danger" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                {{-- <a class="btn btn-danger" href="{{ route('register') }}">{{ __('Register') }}</a> --}}
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}

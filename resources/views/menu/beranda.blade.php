@@ -165,7 +165,7 @@
                                                     class="portfolio-overlay">&nbsp;</span>
                                                 <div class="portfolio-overlay-content">
                                                     <h3 class="portfolio-title">
-                                                        <a href="{{asset('gambar/img1.jpeg')}}" data-rel="fancybox">Wood Crafting</a></h3>
+                                                        CAHAYA PRO</h3>
                                                 </div>
                                             </div>
                                         </div>
@@ -179,7 +179,7 @@
                                                     width="700" height="400" /><span
                                                     class="portfolio-overlay">&nbsp;</span>
                                                 <div class="portfolio-overlay-content">
-                                                    <h3 class="portfolio-title"><a href="#">Mixed Plywood</a></h3>
+                                                    <h3 class="portfolio-title">CAHAYA PRO</h3>
                                                 </div>
                                             </div>
                                         </div>
@@ -194,7 +194,7 @@
                                                     class="portfolio-overlay">&nbsp;</span>
                                                 <div class="portfolio-overlay-content">
                                                     <h3 class="portfolio-title">
-                                                        <a href="https://vimeo.com/35208721" data-rel="fancybox" data-fancybox-type="iframe">Wood Flooring</a></h3>
+                                                        CAHAYA PRO</h3>
                                                 </div>
                                             </div>
                                         </div>
@@ -209,8 +209,7 @@
                                                     width="700" height="400" /><span
                                                     class="portfolio-overlay">&nbsp;</span>
                                                 <div class="portfolio-overlay-content">
-                                                    <h3 class="portfolio-title"><a href="#">Built in Living
-                                                            Room</a></h3>
+                                                    <h3 class="portfolio-title">CAHAYA PRO</h3>
                                                     <div class="gdlr-portfolio-info">
 
                                                         <div class="clear">
@@ -231,8 +230,7 @@
                                                     width="700" height="400" /><span
                                                     class="portfolio-overlay">&nbsp;</span>
                                                 <div class="portfolio-overlay-content">
-                                                    <h3 class="portfolio-title"><a href="#">Video inside this
-                                                            post</a></h3>
+                                                    <h3 class="portfolio-title">CAHAYA PRO</h3>
 
                                                 </div>
 
@@ -248,9 +246,7 @@
                                                     width="700" height="400" /><span
                                                     class="portfolio-overlay">&nbsp;</span>
                                                 <div class="portfolio-overlay-content">
-                                                    <h3 class="portfolio-title"><a
-                                                            href="upload/shutterstock_125357699.jpg"
-                                                            data-rel="fancybox">Flooring Design</a></h3>
+                                                    <h3 class="portfolio-title">CAHAYA PRO</h3>
 
                                                 </div>
 

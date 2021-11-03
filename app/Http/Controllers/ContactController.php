@@ -9,6 +9,6 @@ class ContactController extends Controller
 {
     public function index()
     {
-        return redirect()->away('https://wa.me/082216911728');
+        return redirect()->away('https://wa.me/+6281215007972');
     }
 }
